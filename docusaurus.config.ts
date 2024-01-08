@@ -195,6 +195,7 @@ const config: Config = {
     ],
   ],
   plugins: [
+    path.resolve(__dirname, './src/plugin/plugin-utils-tags'),
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
     path.resolve(__dirname, './src/plugin/plugin-baidu-tongji'),
