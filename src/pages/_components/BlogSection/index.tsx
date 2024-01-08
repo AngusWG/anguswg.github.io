@@ -10,7 +10,7 @@ import Image from '@theme/IdealImage'
 import styles from './styles.module.scss'
 import SectionTitle from '../SectionTitle'
 
-const BLOG_POSTS_COUNT = 12
+const BLOG_POSTS_COUNT = 6
 
 function DateFunc({ date }: { date: Date }) {
   var iso_data = new Date(date).toISOString().slice(0, 10)
@@ -21,7 +21,7 @@ function DateFunc({ date }: { date: Date }) {
   )
 }
 
-export function BlogItem({ post }: { post: BlogPost }) {
+export function BlogItem({ post, index }: { post: BlogPost; index: number }) {
   const {
     metadata: { permalink, frontMatter, title, description, date },
   } = post
@@ -37,7 +37,9 @@ export function BlogItem({ post }: { post: BlogPost }) {
     >
       <div className={clsx('card__body', styles.blogItem)}>
         <div className={styles.title}>
-          <Link href={permalink}>{title}</Link>
+          <Link href={permalink}>
+            0{index + 1} - {title}
+          </Link>
         </div>
         <div className={styles.date}>
           <DateFunc date={date} />
@@ -76,7 +78,7 @@ export default function BlogSection(): JSX.Element {
         // <div ref={ref} className={clsx('row', styles.list)}>
         <div className="col col-6 margin-top--sm" key={index}>
           <motion.div key={index}>
-            <BlogItem key={post.id} post={post} />
+            <BlogItem key={post.id} post={post} index={index} />
           </motion.div>
         </div>
         // </div>
