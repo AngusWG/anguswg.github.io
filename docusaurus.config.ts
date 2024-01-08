@@ -55,27 +55,11 @@ const config: Config = {
           position: 'right',
           to: 'blog',
         },
-        // {
-        //   label: '项目',
-        //   position: 'right',
-        //   to: 'project',
-        // },
         {
           label: '友链',
           position: 'right',
           to: 'friends',
         },
-        // {
-        //   label: '更多',
-        //   position: 'right',
-        //   items: [
-        //     { label: '归档', to: 'blog/archive' },
-        //     { label: '笔记', to: 'docs/skill' },
-        //     { label: '资源', to: 'resource' },
-        //     { label: '友链', to: 'friends' },
-        //     { label: '工具推荐', to: 'docs/tools' },
-        //   ],
-        // },
         {
           type: 'localeDropdown',
           position: 'right',
@@ -88,17 +72,17 @@ const config: Config = {
         {
           title: '学习',
           items: [
-            { label: '博客', to: 'blog' },
-            { label: '归档', to: 'blog/archive' },
-            { label: '技术笔记', to: 'docs/skill' },
-            { label: '实战项目', to: 'project' },
-            { label: '前端示例', to: 'https://example.kuizuo.cn' },
+            // { label: '博客', to: 'blog' },
+            // { label: '归档', to: 'blog/archive' },
+            // { label: '技术笔记', to: 'docs/skill' },
+            // { label: '实战项目', to: 'project' },
+            // { label: '前端示例', to: 'https://example.kuizuo.cn' },
           ],
         },
         {
           title: '社交媒体',
           items: [
-            { label: '关于我', to: '/about' },
+            // { label: '关于我', to: '/about' },
             { label: 'GitHub', href: 'https://github.com/kuizuo' },
             { label: 'Twitter', href: 'https://twitter.com/kuizuo' },
             {
@@ -111,8 +95,8 @@ const config: Config = {
         {
           title: '更多',
           items: [
-            { label: '友链', position: 'right', to: 'friends' },
-            { label: '导航', position: 'right', to: 'resource' },
+            // { label: '友链', position: 'right', to: 'friends' },
+            // { label: '导航', position: 'right', to: 'resource' },
           ],
         },
       ],
