@@ -10,17 +10,20 @@ import Image from '@theme/IdealImage'
 import styles from './styles.module.scss'
 import SectionTitle from '../SectionTitle'
 
-const chunk = (arr, size) =>
-  Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
-    arr.slice(i * size, i * size + size),
-  )
+const BLOG_POSTS_COUNT = 12
 
-const BLOG_POSTS_COUNT = 6
-const BLOG_POSTS_PER_ROW = 2
+function DateFunc({ date }: { date: Date }) {
+  var iso_data = new Date(date).toISOString().slice(0, 10)
+  return (
+    <time dateTime={iso_data} itemProp="datePublished">
+      {iso_data}
+    </time>
+  )
+}
 
 export function BlogItem({ post }: { post: BlogPost }) {
   const {
-    metadata: { permalink, frontMatter, title, description },
+    metadata: { permalink, frontMatter, title, description, date },
   } = post
 
   return (
@@ -29,19 +32,16 @@ export function BlogItem({ post }: { post: BlogPost }) {
       key={permalink}
       initial={{ y: 100, opacity: 0.001 }}
       whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
-      whileHover={{ y: -10, transition: { duration: 0.3 } }}
+      whileHover={{ y: -10, transition: { duration: 0.5 } }}
       viewport={{ once: true }}
     >
-      {frontMatter.image && (
-        <Link href={permalink} className={styles.image}>
-          <Image src={frontMatter.image!} alt={title} img={''} />
-        </Link>
-      )}
-      <div className={'card__body'}>
-        <h4>
+      <div className={clsx('card__body', styles.blogItem)}>
+        <div className={styles.title}>
           <Link href={permalink}>{title}</Link>
-        </h4>
-        <p>{description}</p>
+        </div>
+        <div className={styles.date}>
+          <DateFunc date={date} />
+        </div>
       </div>
     </motion.li>
   )
@@ -54,7 +54,7 @@ export default function BlogSection(): JSX.Element {
     tagNum: number
   }
 
-  const posts = chunk(blogData.posts.slice(0, BLOG_POSTS_COUNT), BLOG_POSTS_PER_ROW)
+  const posts = blogData.posts.slice(0, BLOG_POSTS_COUNT)
 
   const ref = React.useRef<HTMLDivElement>(null)
 
@@ -72,17 +72,15 @@ export default function BlogSection(): JSX.Element {
       <SectionTitle icon="ri:quill-pen-line" href={'/blog'}>
         <Translate id="homepage.blog.title">近期博客</Translate>
       </SectionTitle>
-      <div ref={ref} className={clsx('row', styles.list)}>
-        {posts.map((postGroup, index) => (
-          <div className="col col-6 margin-top--sm" key={index}>
-            {postGroup.map((post, i) => (
-              <motion.div style={{ y: i / 2 ? y : 0 }} key={i}>
-                <BlogItem key={post.id} post={post} />
-              </motion.div>
-            ))}
-          </div>
-        ))}
-      </div>
+      {posts.map((post, index) => (
+        // <div ref={ref} className={clsx('row', styles.list)}>
+        <div className="col col-6 margin-top--sm" key={index}>
+          <motion.div key={index}>
+            <BlogItem key={post.id} post={post} />
+          </motion.div>
+        </div>
+        // </div>
+      ))}
     </section>
   )
 }

@@ -93,7 +93,7 @@ function Name() {
           e.currentTarget.style.setProperty('--mouse-y', `${bounding.y}px`)
         }}
       >
-        <Translate id="homepage.hero.name">愧怍</Translate>
+        <Translate id="homepage.hero.name">AngusWG(zza)</Translate>
       </span>
       <span className={styles.wave}>👋</span>
     </motion.div>
@@ -107,7 +107,7 @@ export default function Hero() {
         <Name />
         <motion.p custom={2} initial="hidden" animate="visible" variants={variants}>
           <Translate id="homepage.hero.text">
-            {`在这里我会分享各类技术栈所遇到问题与解决方案，带你了解最新的技术栈以及实际开发中如何应用，并希望我的开发经历对你有所启发。`}
+            {`慢慢发现很多东西存在脑子里不靠谱，像内存一样，断个电就没了，所以啥屁事都会写点东西出来，哪怕以后忘了，也至少有文档证明自己弄过。`}
           </Translate>
         </motion.p>
         <motion.div custom={3} initial="hidden" animate="visible" variants={variants}>

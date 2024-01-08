@@ -1,5 +1,9 @@
 .blogContainer {
   max-width: 1280px;
+  
+  .list {
+    max-height: none;
+  }
 }
 
 .list {
@@ -52,4 +56,18 @@
   .list {
     max-height: none;
   }
+}
+
+.blogItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  flex: 1;
+}
+
+.date {
+  text-align: right;
 }

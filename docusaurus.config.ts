@@ -5,20 +5,17 @@ import { themes } from 'prism-react-renderer'
 import { Social } from './src/components/SocialLinks'
 import { GiscusConfig } from './src/components/Comment'
 
-const beian = '闽ICP备2020017848号-2'
-const beian1 = '闽公网安备35021102000847号'
-
 const config: Config = {
-  title: '愧怍的小站',
-  url: 'https://kuizuo.cn',
+  title: 'AngusWG blog',
+  url: 'https://anguswg.github.io/',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
-  organizationName: 'kuizuo',
-  projectName: 'blog',
+  organizationName: 'AngusWG',
+  projectName: 'anguswg.github.io',
   customFields: {
-    bio: '道阻且长，行则将至',
+    bio: '吾生有涯，阿巴阿巴。',
     description:
-      '是一个由愧怍创建的个人博客，主要分享编程开发知识和项目，该网站基于 React 驱动的静态网站生成器 Docusaurus 构建。',
+      '慢慢发现很多东西存在脑子里不靠谱，像内存一样，断个电就没了，所以啥屁事都会写点东西出来，哪怕以后忘了，也至少有文档证明自己弄过。',
   },
   themeConfig: {
     // announcementBar: {
@@ -28,15 +25,15 @@ const config: Config = {
     metadata: [
       {
         name: 'keywords',
-        content: '愧怍, kuizuo',
+        content: 'AngusWG, zza',
       },
       {
         name: 'keywords',
-        content: 'blog, javascript, typescript, node, react, vue, web',
+        content: 'blog, python, markdown, develop',
       },
       {
         name: 'keywords',
-        content: '编程爱好者, Web开发者, 写过爬虫, 学过逆向, 现在主攻ts全栈',
+        content: '编程爱好者, Web开发者, 写过爬虫, 现在主攻全干',
       },
     ],
     docs: {
@@ -47,7 +44,7 @@ const config: Config = {
 
     navbar: {
       logo: {
-        alt: '愧怍',
+        alt: 'AngusWG',
         src: 'img/logo.webp',
         srcDark: 'img/logo.webp',
       },
@@ -58,22 +55,27 @@ const config: Config = {
           position: 'right',
           to: 'blog',
         },
+        // {
+        //   label: '项目',
+        //   position: 'right',
+        //   to: 'project',
+        // },
         {
-          label: '项目',
+          label: '友链',
           position: 'right',
-          to: 'project',
+          to: 'friends',
         },
-        {
-          label: '更多',
-          position: 'right',
-          items: [
-            { label: '归档', to: 'blog/archive' },
-            { label: '笔记', to: 'docs/skill' },
-            { label: '资源', to: 'resource' },
-            { label: '友链', to: 'friends' },
-            { label: '工具推荐', to: 'docs/tools' },
-          ],
-        },
+        // {
+        //   label: '更多',
+        //   position: 'right',
+        //   items: [
+        //     { label: '归档', to: 'blog/archive' },
+        //     { label: '笔记', to: 'docs/skill' },
+        //     { label: '资源', to: 'resource' },
+        //     { label: '友链', to: 'friends' },
+        //     { label: '工具推荐', to: 'docs/tools' },
+        //   ],
+        // },
         {
           type: 'localeDropdown',
           position: 'right',
@@ -111,23 +113,10 @@ const config: Config = {
           items: [
             { label: '友链', position: 'right', to: 'friends' },
             { label: '导航', position: 'right', to: 'resource' },
-            {
-              html: `
-                <a href="https://docusaurus.io/zh-CN/" target="_blank" rel="noreferrer noopener">
-                  <img src="/img/buildwith.png" alt="build with docusaurus" width="120" height="50"/>
-                <a/>
-                `,
-            },
           ],
         },
       ],
-      copyright: `
-        <p style="margin-bottom: 0;"><a href="http://beian.miit.gov.cn/">${beian}</a></p>
-        <p style="display: inline-flex; align-items: center;"><img style="height:20px;margin-right: 0.5rem;" src="/img/police.png" alt="police" height="20"/><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=${beian1.match(
-          /\d+/,
-        )?.[0]}" >${beian1}</a></p>
-        <p>Copyright © 2020 - PRESENT 愧怍 Built with Docusaurus.</p>
-        `,
+      copyright: `Built by Docusaurus | Copyright © ${new Date().getFullYear()} AngusWG blog | MIT License`,
     },
     algolia: {
       appId: 'GV6YN1ODMO',
@@ -226,8 +215,8 @@ const config: Config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: 'all',
-          title: '愧怍',
-          copyright: `Copyright © ${new Date().getFullYear()} 愧怍 Built with Docusaurus.<p><a href="http://beian.miit.gov.cn/" class="footer_lin">${beian}</a></p>`,
+          title: 'AngusWG',
+          copyright: `Built by Docusaurus | Copyright © ${new Date().getFullYear()} AngusWG blog | MIT License`,
         },
       },
     ],
@@ -250,7 +239,7 @@ const config: Config = {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: '愧怍的个人博客',
+        content: 'AngusWG blog',
       },
     },
   ],
