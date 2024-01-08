@@ -22,6 +22,19 @@ function updateTags(filePath) {
   // 初始化或者确保 data.tags 是一个数组
   data.tags = Array.isArray(data.tags) ? data.tags.filter(tag => tag !== null) : []
 
+  // 合并 categories 到 tags
+  if (Array.isArray(data.categories)) {
+    data.tags = [...new Set([...data.tags, ...data.categories])]
+  }
+
+  // 如果 permalink 存在，将其保存到 slug 属性中
+  if (data.permalink) {
+    data.slug = data.permalink
+  } else {
+    // 如果没有 permalink，抛出异常并退出
+    throw new Error(`Permalink not found in ${filePath}`)
+  }
+
   // 更新 Markdown 文件内容
   const updatedMarkdownFileContent = grayMatter.stringify(content, data)
 
@@ -43,7 +56,12 @@ function processBlogFolder(folderPath) {
       processBlogFolder(filePath)
     } else if (path.extname(filePath) === '.md') {
       // 如果是 Markdown 文件，则更新 tags
-      updateTags(filePath)
+      try {
+        updateTags(filePath)
+      } catch (error) {
+        console.error(error.message)
+        process.exit(1) // 退出进程
+      }
     }
   })
 }

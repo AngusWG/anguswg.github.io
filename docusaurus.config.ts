@@ -56,14 +56,25 @@ const config: Config = {
           to: 'blog',
         },
         {
+          label: '归档',
+          position: 'left',
+          to: 'blog/archive',
+        },
+        {
           label: '友链',
           position: 'right',
-          to: 'friends',
+          to: 'blog/friends',
         },
+        // {
+        //   label: 'Tags',
+        //   position: 'left',
+        //   to: '/blog/tags',
+        // },
         {
           type: 'localeDropdown',
           position: 'right',
         },
+        { label: 'GitHub', position: 'right', href: 'https://github.com/AngusWG' },
       ],
     },
     footer: {
@@ -72,30 +83,23 @@ const config: Config = {
         {
           title: '学习',
           items: [
-            // { label: '博客', to: 'blog' },
-            // { label: '归档', to: 'blog/archive' },
-            // { label: '技术笔记', to: 'docs/skill' },
-            // { label: '实战项目', to: 'project' },
-            // { label: '前端示例', to: 'https://example.kuizuo.cn' },
+            { label: '博客', to: 'blog' },
+            { label: '归档', to: 'blog/archive' },
+            { label: 'RSS', to: '/blog/rss.xml' },
           ],
         },
         {
           title: '社交媒体',
           items: [
-            // { label: '关于我', to: '/about' },
-            { label: 'GitHub', href: 'https://github.com/kuizuo' },
-            { label: 'Twitter', href: 'https://twitter.com/kuizuo' },
-            {
-              label: '掘金',
-              href: 'https://juejin.cn/user/1565318510545901',
-            },
-            { label: 'Discord', href: 'https://discord.gg/M8cVcjDxkz' },
+            { label: '关于我', to: '/about' },
+            { label: 'GitHub', href: 'https://github.com/AngusWG' },
+            { label: 'Twitter', href: 'https://twitter.com/Angus_Zou' },
           ],
         },
         {
           title: '更多',
           items: [
-            // { label: '友链', position: 'right', to: 'friends' },
+            { label: '友链', position: 'right', to: 'blog/friends' },
             // { label: '导航', position: 'right', to: 'resource' },
           ],
         },
@@ -189,7 +193,7 @@ const config: Config = {
       {
         path: 'blog',
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
-          `https://github.com/kuizuo/blog/edit/main/${blogDirPath}/${blogPath}`,
+          `https://github.com/Anugus/anguswg.github.io/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
         blogDescription: '代码人生：编织技术与生活的博客之旅',
         blogSidebarCount: 10,
