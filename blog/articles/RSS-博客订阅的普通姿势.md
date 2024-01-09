@@ -32,7 +32,7 @@ eg. https://anguswg.github.io/AngusWG/rss.xml
 
 ## feedly
 
-这里有另一个订阅方式 [feedly](/https://feedly.com/)
+这里有另一个订阅方式 [feedly](https://feedly.com/)
 操作上也是获取RSS，贴上去就好了~
 
 ## Outlook RSS(目前使用中)
