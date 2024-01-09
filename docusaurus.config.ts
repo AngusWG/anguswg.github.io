@@ -139,10 +139,10 @@ const config: Config = {
       ],
     },
     giscus: {
-      repo: 'kuizuo/blog',
-      repoId: 'MDEwOlJlcG9zaXRvcnkzOTc2MjU2MTI=',
+      repo: 'AngusWG/anguswg.github.io',
+      repoId: 'R_kgDOLCLxHw',
       category: 'General',
-      categoryId: 'DIC_kwDOF7NJDM4CPK95',
+      categoryId: 'DIC_kwDOLCLxH84CcTDP',
       theme: 'light',
       darkTheme: 'dark_dimmed',
     } satisfies Partial<GiscusConfig>,
@@ -175,7 +175,7 @@ const config: Config = {
           priority: 0.5,
         },
         gtag: {
-          trackingID: 'G-S4SD5NXWXF',
+          trackingID: 'G-YX6DQTJZBL',
           anonymizeIP: true,
         },
         // debug: true,

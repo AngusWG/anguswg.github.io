@@ -17,9 +17,9 @@
 - [ ] tags 页面
   - [ ] 去除属性
   - [ ] 修改 slug 属性
-- [ ] 博客整理
-- [ ] 评论
-- [ ] Google Analytics
+- [x] 博客整理
+- [x] 评论
+- [x] Google Analytics
 - [ ] 图片
 - [ ] 搜索
 - [ ] 老博客重定向
