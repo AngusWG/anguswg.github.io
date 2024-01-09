@@ -18,10 +18,10 @@
   - [ ] 去除属性
   - [ ] 修改 slug 属性
 - [x] 博客整理
-- [x] 评论
-- [x] Google Analytics
+- [x] [评论](https://github.com/AngusWG/anguswg.github.io/discussions)
+- [x] [Google Analytics](https://analytics.google.com/analytics/)
+- [ ] [搜索](https://dashboard.algolia.com/)
 - [ ] 图片
-- [ ] 搜索
 - [ ] 老博客重定向
 - [ ] 文章发布 CICD
 - [ ] 服务器重定向

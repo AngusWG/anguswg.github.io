@@ -107,9 +107,9 @@ const config: Config = {
       copyright: `Built by Docusaurus | Copyright © ${new Date().getFullYear()} AngusWG blog | MIT License`,
     },
     algolia: {
-      appId: 'GV6YN1ODMO',
-      apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'kuizuo',
+      appId: 'XH5PEF6J1C',
+      apiKey: '3992caa31fad4437bac55d8474fd743e',
+      indexName: 'blog',
     },
     prism: {
       theme: themes.oneLight,
