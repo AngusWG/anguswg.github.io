@@ -23,7 +23,7 @@
 - [x] [评论](https://github.com/AngusWG/anguswg.github.io/discussions)
 - [x] [Google Analytics](https://analytics.google.com/analytics/)
 - [ ] [搜索](https://dashboard.algolia.com/)
-- [ ] 图片
+- [x] 图片
 - [ ] 老博客重定向
 - [ ] 文章发布 CICD
 - [ ] 服务器重定向

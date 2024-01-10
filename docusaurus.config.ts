@@ -104,7 +104,11 @@ const config: Config = {
           title: '更多',
           items: [
             { label: '友链', position: 'right', to: 'blog/friends' },
-            { label: 'Fork by kuizuo/blog', position: 'right', href: 'https://github.com/kuizuo/blog' },
+            {
+              label: 'Fork by kuizuo/blog',
+              position: 'right',
+              href: 'https://github.com/kuizuo/blog',
+            },
           ],
         },
       ],
@@ -113,7 +117,7 @@ const config: Config = {
     algolia: {
       appId: 'XH5PEF6J1C',
       apiKey: '3992caa31fad4437bac55d8474fd743e',
-      indexName: 'blog',
+      indexName: 'AngusWG',
     },
     prism: {
       theme: themes.oneLight,
