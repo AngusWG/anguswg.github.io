@@ -107,7 +107,7 @@ export default function Hero() {
         <Name />
         <motion.p custom={2} initial="hidden" animate="visible" variants={variants}>
           <Translate id="homepage.hero.text">
-            {`慢慢发现很多东西存在脑子里不靠谱，像内存一样，断个电就没了，所以啥屁事都会写点东西出来，哪怕以后忘了，也至少有文档证明自己弄过。`}
+            {`慢慢发现很多东西存在脑子里不靠谱，像内存一样，断个电就没了，所以啥屁事都会写点东西出来，哪怕以后忘了，也至少有文档证明自己弄过。希望我的经验能给你们带来启发。`}
           </Translate>
         </motion.p>
         <motion.div custom={3} initial="hidden" animate="visible" variants={variants}>
@@ -130,7 +130,7 @@ export default function Hero() {
         </motion.div>
       </div>
       <motion.div className={styles.background}>
-        <Skills />
+        {/* <Skills /> */}
         <HeroMain />
         <Circle />
       </motion.div>
