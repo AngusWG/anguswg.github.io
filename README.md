@@ -15,14 +15,15 @@
 
 - [x] README
 - [x] 首页单行单个最近发表
-- [ ] markdown 双向链接
+- [x] ~~markdown 双向链接~~
+  - [Markdown 链接](https://docusaurus.io/zh-CN/docs/next/markdown-features/links)
 - [ ] tags 页面
   - [ ] 去除属性
   - [ ] 修改 slug 属性
 - [x] 博客整理
 - [x] [评论](https://github.com/AngusWG/anguswg.github.io/discussions)
 - [x] [Google Analytics](https://analytics.google.com/analytics/)
-- [ ] [搜索](https://dashboard.algolia.com/)
+- [x] [搜索](https://dashboard.algolia.com/)
 - [x] 图片
 - [ ] 老博客重定向
 - [ ] 文章发布 CICD

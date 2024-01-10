@@ -19,6 +19,24 @@ article: false
 
 ---
 
+## DRAFTING
+
+> 这里有一个留言板，随便画点什么吧~
+
+<div class="block-embed block-embed-service-youtube">
+    <iframe
+        type="text/html"
+        width="100%" height="999px"
+        src="https://witeboard.com/bcc77110-af91-11ee-b11a-e5abc3cbd63a"
+        frameborder="0"
+        webkitallowfullscreen=""
+        mozallowfullscreen=""
+        allowfullscreen="allowfullscreen">
+    </iframe>
+</div>
+
+---
+
 ## AND MORE
 
 都翻到关于了，请作者喝个咖啡把~

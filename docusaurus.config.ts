@@ -104,6 +104,7 @@ const config: Config = {
           title: '更多',
           items: [
             { label: '友链', position: 'right', to: 'blog/friends' },
+            { label: '关于', position: 'right', to: '/blog/about' },
             {
               label: 'Fork by kuizuo/blog',
               position: 'right',
