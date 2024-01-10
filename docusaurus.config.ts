@@ -74,7 +74,11 @@ const config: Config = {
           type: 'localeDropdown',
           position: 'right',
         },
-        { label: 'GitHub', position: 'right', href: 'https://github.com/AngusWG' },
+        {
+          label: 'GitHub',
+          position: 'right',
+          href: 'https://github.com/AngusWG/anguswg.github.io/',
+        },
       ],
     },
     footer: {
