@@ -1,0 +1,26 @@
+name: Create pull request for sync note from dev_auto
+on:
+  push:
+    branches:
+      - dev_auto
+jobs:
+  SYNC_NOTE:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: master
+      - run: ls
+      - name: Reset main branch
+        run: |
+          git fetch origin dev_auto:dev_auto
+          git reset --hard dev_auto
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        id: cpr
+        with:
+          commit-message: publish note to blog
+          title: sync note pull request
+          body: sync note to blog
+          branch: dev_auto
+          base: master
