@@ -15,6 +15,7 @@ jobs:
         run: |
           git fetch origin dev_auto:dev_auto
           git reset --hard dev_auto
+      #  create-pull-request 需要根据官方设置 action 权限
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         id: cpr
