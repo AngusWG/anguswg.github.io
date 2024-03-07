@@ -20,5 +20,5 @@ jobs:
           commit-message: publish note to blog
           title: sync note pull request
           body: sync note to blog
-          branch: dev_auto
-          base: main
+          branch: main
+          base: dev_auto
