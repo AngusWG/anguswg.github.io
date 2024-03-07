@@ -7,9 +7,9 @@ jobs:
   SYNC_NOTE:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@master
         with:
-          ref: main
+          ref: dev_auto
 
       - run: ls
 
