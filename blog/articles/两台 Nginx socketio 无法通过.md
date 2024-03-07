@@ -19,7 +19,7 @@ article: true
 
 ![ ](../images/7485616-400155209c27c580.gif)
 
-``` python3
+``` python
         location /socket.io {    
             proxy_pass http://pro_socketio;    
             proxy_http_version 1.1;    

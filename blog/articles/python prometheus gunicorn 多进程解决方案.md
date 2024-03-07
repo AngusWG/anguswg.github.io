@@ -113,7 +113,7 @@ def setup_monitoring(app, app_name=None):
 
 - 在你代码中 导入文件并初始化
 
-``` python3
+``` python
 # from flask import Flask    
 # app = Flask(__name__)    
 from persistd.monitoring import setup_monitoring    
@@ -123,7 +123,7 @@ setup_monitoring(app, "app_name")
 - 设置Gunicom配置文件
 `vim gunicorn.conf.py`
 
-``` python3
+``` python
 from prometheus_client import multiprocess    
 def child_exit(server, worker):    
     multiprocess.mark_process_dead(worker.pid)    

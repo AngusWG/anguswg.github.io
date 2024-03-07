@@ -38,7 +38,7 @@ article: true
 
 修改 `%USERPROFILE%\.wslconfig`
 
-``` config
+``` ini
 [wsl2]
 guiApplications=false
 ```

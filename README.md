@@ -25,7 +25,7 @@
 - [x] [Google Analytics](https://analytics.google.com/analytics/)
 - [x] [搜索](https://dashboard.algolia.com/)
 - [x] 图片
-- [ ] 老博客重定向
+- [x] [老博客重定向](https://finisky.github.io/migrate-github-pages-by-301-redirects/)
 - [ ] 文章发布 CICD
 - [ ] 服务器重定向
 

@@ -72,7 +72,7 @@ File -> Settings -> Tools -> External Tools
 
 按`+`号按钮 增加新的拓展工具
 
-``` test
+``` text
 Name: Black
 Description: Black is the uncompromising Python code formatter.
 Program: <install_location_from_step_2>

@@ -99,7 +99,7 @@ pip config set global.trusted-host pypi.tuna.tsinghua.edu.cn
 
 - 输入`ipython` 然后按如下操作
 
-```python3
+``` python
 import rqdatac    
 rqdatac.init("手机号","密码")    
 rqdatac.user.get_quota()    
