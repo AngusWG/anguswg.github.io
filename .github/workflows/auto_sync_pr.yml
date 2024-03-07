@@ -22,3 +22,4 @@ jobs:
           body: sync note to blog
           branch: main
           base: dev_auto
+          reviewers: AngusWG
