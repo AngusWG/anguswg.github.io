@@ -1,6 +1,6 @@
 ---
 title: 使用 cloudflare-worker 获取 bing-wallpaper 的每日壁纸
-date: 2024-03-06 21:52:58
+date: 2024-03-06 21:52:57
 permalink: /pages/4fd49ef1-4e3a-4e80-b7e1-901e5e6a2194/
 tags:
   - 
