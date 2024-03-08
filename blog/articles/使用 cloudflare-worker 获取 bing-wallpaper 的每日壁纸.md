@@ -1,6 +1,6 @@
 ---
 title: 使用 cloudflare-worker 获取 bing-wallpaper 的每日壁纸
-date: 2024-03-06 21:52:57
+date: 2024-03-06 21:52:56
 permalink: /pages/4fd49ef1-4e3a-4e80-b7e1-901e5e6a2194/
 tags:
   - 
@@ -40,12 +40,12 @@ export default {
     const target_url = `https://www.bing.com${image_url}`
 
     const image_response = await fetch(target_url)
-  
-    const CACHE_TIME = 12 * 60 * 60; // 缓存时间为 12 小时，单位为秒
 
     const response = new Response(image_response.body, image_response);
-    // 设置 Cache-Control 标头
+    // 图片到期时间太长 有8天 设置 Cache-Control 标头
+    const CACHE_TIME = 12 * 60 * 60; // 缓存时间为 12 小时，单位为秒
     response.headers.set('Cache-Control', `max-age=${CACHE_TIME}`);
+
     return response;
   }
 };
@@ -73,6 +73,7 @@ export default {
 - 增加代码解决
 
 ```js
+    const CACHE_TIME = 12 * 60 * 60; // 缓存时间为 12 小时，单位为秒
     const response = new Response(image_response.body, image_response);
     // 设置 Cache-Control 标头
     response.headers.set('Cache-Control', `max-age=${CACHE_TIME}`);
