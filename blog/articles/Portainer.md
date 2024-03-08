@@ -1,6 +1,6 @@
 ---
 title: Portainer
-date: 2024-03-02 17:30:21
+date: 2024-03-02 17:30:22
 permalink: /pages/dabbdda6-91e2-4274-89c7-9b265442a9bb/
 tags:
   - 
@@ -44,6 +44,7 @@ services:
 ### 生成证书
 
 - `sudo vim /srv/certs.d/auto-tls-certs.sh`
+- `sudo bash /srv/certs.d/auto-tls-certs.sh`
 - `记得修改上面的配置信息`
 
 ```bash
