@@ -1,6 +1,6 @@
 ---
-title: Portainer
-date: 2024-03-02 17:30:22
+title: 搭建 Portainer
+date: 2024-11-02 17:30:22
 permalink: /pages/dabbdda6-91e2-4274-89c7-9b265442a9bb/
 tags:
   - 
@@ -9,7 +9,7 @@ categories:
 article: true
 ---
 
-# Portainer
+# 搭建 Portainer
 
 ## 启动管理页面
 
