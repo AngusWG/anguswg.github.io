@@ -1,6 +1,6 @@
 ---
 title: 搭建 Portainer
-date: 2024-11-02 17:30:22
+date: 2023-11-02 17:30:22
 permalink: /pages/dabbdda6-91e2-4274-89c7-9b265442a9bb/
 tags:
   - 
@@ -43,6 +43,7 @@ services:
 
 ### 生成证书
 
+- `sudo mkdir -p /srv/certs.d/`
 - `sudo vim /srv/certs.d/auto-tls-certs.sh`
 - `sudo bash /srv/certs.d/auto-tls-certs.sh`
 - `记得修改上面的配置信息`
@@ -150,7 +151,11 @@ unable to resolve docker endpoint: open /root/.docker/ca.pem: no such file or di
 这是由于目前没有在对应的用户文件夹下配置证书，我们可以执行以下命令：
 
 ```bash
-mkdir ~/.docker && \ tar -zxvf /srv/certs.d/tls-client-certs-docker_api.tar.gz -C ~/.docker && \ mv ~/.docker/ca-docker_api.pem ~/.docker/ca.pem && \ mv ~/.docker/cert-docker_api.pem ~/.docker/cert.pem && \ mv ~/.docker/key-docker_api.pem ~/.docker/key.pem
+mkdir ~/.docker && \
+tar -zxvf /srv/certs.d/tls-client-certs-docker_api.tar.gz -C ~/.docker && \
+mv ~/.docker/ca-docker_api.pem ~/.docker/ca.pem && \
+mv ~/.docker/cert-docker_api.pem ~/.docker/cert.pem && \
+mv ~/.docker/key-docker_api.pem ~/.docker/key.pem
 ```
 
 完成后再执行一遍 `docker -H=127.0.0.1:2376 --tlsverify info` 即可获取信息了，至此验证完成。
