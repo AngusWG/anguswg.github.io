@@ -116,8 +116,8 @@ const config: Config = {
       copyright: `Built by Docusaurus | Copyright © ${new Date().getFullYear()} AngusWG blog | MIT License`,
     },
     algolia: {
-      appId: 'XH5PEF6J1C',
-      apiKey: '3992caa31fad4437bac55d8474fd743e',
+      appId: 'H5ZK2BY49V',
+      apiKey: '0c0d4b4e4b7e04317eae247ce1001393',
       indexName: 'AngusWG',
     },
     prism: {
