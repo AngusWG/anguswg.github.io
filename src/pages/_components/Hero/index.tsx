@@ -102,7 +102,7 @@ function Name() {
 
 export default function Hero() {
   return (
-    <motion.div className={styles.hero}>
+    <motion.div className={styles.hero} style={{ height: '50%', overflow: 'hidden' }}>
       <div className={styles.intro}>
         <Name />
         <motion.p custom={2} initial="hidden" animate="visible" variants={variants}>
