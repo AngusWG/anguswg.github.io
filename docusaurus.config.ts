@@ -95,7 +95,7 @@ const config: Config = {
         {
           title: '社交媒体',
           items: [
-            { label: '关于我', to: '/about' },
+            // { label: '关于我', to: '/about' },
             { label: 'GitHub', href: 'https://github.com/AngusWG' },
             { label: 'Twitter', href: 'https://twitter.com/Angus_Zou' },
           ],
