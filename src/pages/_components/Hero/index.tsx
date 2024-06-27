@@ -123,7 +123,7 @@ export default function Hero() {
         >
           <div className={styles.outer}>
             <div className={styles.gradient} />
-            <a className={styles.button} href={'./about'}>
+            <a className={styles.button} href={'./blog/about'}>
               <Translate id="hompage.hero.introduce">自我介绍</Translate>
             </a>
           </div>
