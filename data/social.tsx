@@ -18,6 +18,7 @@ const social: Social = {
   // csdn: 'https://blog.csdn.net/AngusWG',
   // qq: 'https://img.AngusWG.cn/qq.png',
   // wx: 'https://img.AngusWG.cn/wechat.png',
+  wx: 'https://github.com/AngusWG/anguswg.github.io/blob/main/blog/images/wechat.png?raw=true',
   // zhihu: 'https://www.zhihu.com/people/AngusWG',
   // cloudmusic: 'https://music.163.com/#/user/home?id=1333010742',
   email: 'mailto:z740713651@outlook.com',

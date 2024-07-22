@@ -102,7 +102,7 @@ function Name() {
 
 export default function Hero() {
   return (
-    <motion.div className={styles.hero}>
+    <motion.div className={styles.hero} style={{ height: '50%', overflow: 'hidden' }}>
       <div className={styles.intro}>
         <Name />
         <motion.p custom={2} initial="hidden" animate="visible" variants={variants}>
@@ -123,7 +123,7 @@ export default function Hero() {
         >
           <div className={styles.outer}>
             <div className={styles.gradient} />
-            <a className={styles.button} href={'./about'}>
+            <a className={styles.button} href={'./blog/about'}>
               <Translate id="hompage.hero.introduce">自我介绍</Translate>
             </a>
           </div>
