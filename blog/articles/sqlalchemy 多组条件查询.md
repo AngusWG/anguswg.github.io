@@ -16,7 +16,7 @@ article: true
 
 ## 用sqlalchemy 实现
 
-``` python
+```python
 _list_data = ['1,name1', '2,name2', '3,name3']    
 session.query(Booking.booking_id).filter(Booking.num.concat(",").concat(Booking.name).notin_(_list_data))    
 ```

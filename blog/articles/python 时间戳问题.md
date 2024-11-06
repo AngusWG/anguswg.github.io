@@ -14,7 +14,7 @@ article: true
 - 程序中  mongo_id 的生成有 timestamp 决定
 - 于是测试：
 
-``` python
+```python
 import time    
 for i in range(20):    
     print(time.time())    

@@ -14,7 +14,7 @@ article: true
 
 使用以下命令创建项目
 
-``` bash
+```bash
 pip install cookiecutter 
 cookiecutter https://github.com/AngusWG/cookiecutter-py-package.git
 ```
@@ -53,7 +53,7 @@ cookiecutter https://github.com/AngusWG/cookiecutter-py-package.git
 以下命令将设置一个默认 pre-commit
 在当前项目下有`Makeflie`的情况下 执行`make check`命令
 
-``` bash
+```bash
 python -c "from urllib.request import urlopen ;exec(urlopen('https://github.com/AngusWG/cookiecutter-py-package/raw/master/git_pre_commit_hook.py').read())"
 ```
 

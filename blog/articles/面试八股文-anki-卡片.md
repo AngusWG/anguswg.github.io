@@ -71,7 +71,7 @@ article: true
 - 顺序问题
   - 暂时不解决
 
-``` bash
+```bash
 python format_markdown.py
 pip install markdown-anki-decks
 mdankideck .\docs .\anki --prefix "面试八股文：:" --sync -delete 
@@ -79,7 +79,7 @@ mdankideck .\docs .\anki --prefix "面试八股文：:" --sync -delete
 
 ### format markdown 脚本
 
-``` python
+```python
 #!/usr/bin/env python
 # encoding: utf-8
 # @Time   : 2022/08/07 13:35:52

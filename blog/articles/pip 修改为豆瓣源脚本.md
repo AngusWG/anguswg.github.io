@@ -14,7 +14,7 @@ article: true
 
 运行以下命令就好了
 
-``` bash
+```bash
 pip config set global.index-url http://pypi.douban.com/simple    
 pip config set global.trusted-host pypi.douban.com    
 pip config set global.disable-pip-version-check true      
@@ -91,7 +91,7 @@ print("save to {}".format(conf_path))
 * 需要用到 python exec 方法
 如下：
 
-``` bash
+```bash
 python -c "import requests;res = requests.get('http://cdn.ricequant.com/rqpro/pip_douban_source_v2.py');exec(res.text)"    
 ```
 

@@ -10,7 +10,7 @@ article: true
 ---
 # flask_admin 设置宽度为全屏
 
-``` html
+```html
 {% extends 'admin/base.html' %}    
     
 {% block head_tail %}    

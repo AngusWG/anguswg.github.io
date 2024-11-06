@@ -16,7 +16,7 @@ python 编译 cython 文件的时候
 
 ## 报错如下
 
-``` bash
+```bash
     ERROR: Command errored out with exit status 1:    
      command: 'd:\programdata\miniconda3\envs\py35\python.exe' -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'D:\\PycharmProjects\\rqalpha-mod-optimizer2\\setup.py'"'"'; __file__='"'"'D:\\PycharmProjects\\rqalpha-mo    
 d-optimizer2\\setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' develop --no-deps    

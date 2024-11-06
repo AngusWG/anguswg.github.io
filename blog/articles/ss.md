@@ -18,7 +18,7 @@ article: true
 
 贴贴下面的配置：
 
-``` json
+```json
     
     
 {    

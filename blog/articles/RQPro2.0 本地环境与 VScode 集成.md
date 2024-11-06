@@ -51,7 +51,7 @@ RQPro2.0 与 VS code 的集成
 
 输入下列代码
 
-``` python
+```python
 #!/usr/bin/python3    
 # encoding: utf-8    
 import pandas as pd    
@@ -80,7 +80,7 @@ print(result.all())
 
 在 `.vscode`文件夹下 `launch.json`中输入如下代码：
 
-``` json
+```json
 {    
     // Use IntelliSense to learn about possible attributes.    
     // Hover to view descriptions of existing attributes.    

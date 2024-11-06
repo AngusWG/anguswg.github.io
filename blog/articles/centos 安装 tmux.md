@@ -16,21 +16,21 @@ article: true
 
 先设置个代理
 
-``` bash
+```bash
 export http_proxy="http://192.168.31.31:9999"
 export https_proxy="http://192.168.31.31:9999"
 ```
 
 ## 安装前置依赖
 
-``` bash
+```bash
 yum install libevent ncurses
 yum install libevent-devel ncurses-devel gcc make bison pkg-config
 ```
 
 ## 安装
 
-``` bash
+```bash
 wget https://github.com/tmux/tmux/releases/download/3.2a/tmux-3.2a.tar.gz
 tar -zxf tmux-*.tar.gz
 cd tmux-*/

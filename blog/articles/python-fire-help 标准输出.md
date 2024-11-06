@@ -18,7 +18,7 @@ article: true
 
 > 修改 fire.core.Display
 
-``` python
+```python
 if __name__ == "__main__":
     # Make Python Fire not use a pager when it prints a help text
     fire.core.Display = lambda lines, out: print(*lines, file=out)
@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
 > 更改 PAGER 环境变量（推荐）
 
-``` text
+```text
 * windows 上设置 setx PAGER type
 * linux 上设置 export PAGER=cat
 ```
@@ -42,7 +42,7 @@ os.environ["PAGER"] = 'cat'
 
 * 一个写完后发现没必要的代码
   
-``` python
+```python
 def _fire_print_prepare() -> None:
     """help to print mode `setx PAGER cat`"""
     import os

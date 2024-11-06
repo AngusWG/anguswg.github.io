@@ -19,7 +19,7 @@ Jenkinsfile 中增加两段代码：
 
 ## 1. 在 stage 该在的地方添加下列代码
 
-``` bash
+```bash
         stage("get GIT_COMMIT_NAME/GIT_COMMIT_EMAIL") {    
             agent any    
             steps {    
@@ -37,7 +37,7 @@ Jenkinsfile 中增加两段代码：
 
 ## 2. 在文件最后一个花括号前面增加下列代码
 
-``` bash
+```bash
     post {    
         success {    
             script {    

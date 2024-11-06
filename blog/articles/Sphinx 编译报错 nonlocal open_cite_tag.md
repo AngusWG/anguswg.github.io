@@ -13,7 +13,7 @@ article: true
 - 线上自动编译时出现错误 SyntaxError: invalid syntax
 - 谷歌上搜 `nonlocal open_cite_tag` 没有任何相关信息
 
-``` text
+```text
 Running Sphinx v1.7.9    
 loading translations [zh_CN]... done    
     
@@ -49,7 +49,7 @@ requirements.txt 文件加上版本限制就 ok
 
 - cat requirements.txt
 
-``` text
+```text
 Sphinx    
 watchdog    
 sphinx_rtd_theme    

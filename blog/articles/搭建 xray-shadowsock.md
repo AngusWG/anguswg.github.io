@@ -21,7 +21,7 @@ article: true
 
 通过 acme.sh 生成证书并自动更新
 
-``` bash
+```bash
 curl  https://get.acme.sh | sh
 apt install socat
 /root/.acme.sh/acme.sh --register-account -m my@example.com
@@ -33,7 +33,7 @@ apt install socat
 
 `mkdir /etc/shadowsocks-libev`
 
-``` vim
+```vim
 # vim /etc/shadowsocks-libev/config.json
 {
     "server":"0.0.0.0",
@@ -51,7 +51,7 @@ apt install socat
 
 ## docker 启动 shadowsocks
 
-``` bash
+```bash
 docker pull teddysun/shadowsocks-libev
 docker run -d -p 9000:9000 -p 9000:9000/udp --name ss-libev --restart=always -v /etc/shadowsocks-libev:/etc/shadowsocks-libev -v /root/.acme.sh:/root/.acme.sh teddysun/shadowsocks-libev
 ```
@@ -62,7 +62,7 @@ docker run -d -p 9000:9000 -p 9000:9000/udp --name ss-libev --restart=always -v 
 - 放到 shadowsocks 客户端文件夹里
 - 写入配置
 
-``` json
+```json
     {
       "server": "www.mydomain.com",
       "server_port": 9000,

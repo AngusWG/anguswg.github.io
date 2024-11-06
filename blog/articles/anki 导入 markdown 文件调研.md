@@ -44,7 +44,7 @@ article: true
 
 `cat .\note\docs\anki\tmp.md`
 
-``` markdown
+```markdown
 # 文章标题
 
 ## 二级标题 1 （抽认卡 A 的提示语句）

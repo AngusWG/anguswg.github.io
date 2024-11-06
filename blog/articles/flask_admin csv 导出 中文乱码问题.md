@@ -16,13 +16,13 @@ article: true
 - 解决：在 Response 开头加上 BOM_UTF8 字符
 - 核心代码
 
-``` python
+```python
 titles[0] = codecs.BOM_UTF8.decode("utf8")+codecs.BOM_UTF8.decode()+titles[0]    
 ```
 
 - 相关引入
 
-``` python
+```python
 import codecs    
 import csv    
     
@@ -32,7 +32,7 @@ from flask import request, redirect, flash, current_app, Response, stream_with_c
 
 - 逻辑代码（复制 放到对应的 ModelView 类里就好了）
 
-``` python
+```python
     def _export_csv(self, return_url):    
         """    
             Export a CSV of records as a stream.    

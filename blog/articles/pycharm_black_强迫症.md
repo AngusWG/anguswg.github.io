@@ -72,7 +72,7 @@ File -> Settings -> Tools -> External Tools
 
 按`+`号按钮 增加新的拓展工具
 
-``` text
+```text
 Name: Black
 Description: Black is the uncompromising Python code formatter.
 Program: <install_location_from_step_2>
@@ -107,7 +107,7 @@ pycharm 原有设置 （方便小伙伴还原）
 
 参考一下 [fastapi](https://github.com/tiangolo/fastapi.git)
 
-``` bash
+```bash
 mypy fastapi
 flake8 fastapi tests
 black fastapi tests --check
@@ -117,7 +117,7 @@ isort fastapi tests docs_src scripts --check-only
 或者用 python 插件 [pre-commit-hooks](https://github.com/harvardfly/simple_calculate_service/blob/master/.pre-commit-config.yaml)
 配置参考这个项目 [simple_calculate_service](https://github.com/harvardfly/simple_calculate_service/blob/master/.pre-commit-config.yaml)
 
-``` yaml
+```yaml
 # cat .pre-commit-config.yaml
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     sha: v1.11.1
@@ -131,7 +131,7 @@ isort fastapi tests docs_src scripts --check-only
 
 参考 [fastapi-crudrouter](https://github.com/awtkns/fastapi-crudrouter)
 
-``` yaml
+```yaml
   lint:
     runs-on: ubuntu-latest
     steps:

@@ -10,7 +10,7 @@ article: true
 ---
 # flask_babelex 使用  
 
-``` bash
+```bash
 # https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n
 # 请在rqlicense-server 目录下操作    
 # 生成翻译文件模版    
@@ -25,7 +25,7 @@ pybabel compile -d rqlicense/translations
 
 - 附赠 messages.po 谷歌翻译脚本
 
-``` python
+```python
 #!/usr/bin/python3    
 # encoding: utf-8     
 # @Time    : 2019/12/13 15:25    

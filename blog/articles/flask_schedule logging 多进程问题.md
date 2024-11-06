@@ -15,7 +15,7 @@ article: true
 
 ## 错误日志
 
-``` text
+```text
 PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'E:\\logs\\contest\\contest.log' -> 'E:\\logs\\contest\\contest.log.1'    
 ```
 
@@ -23,14 +23,14 @@ PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无�
 
 - bash
 
-``` bash
+```bash
 pip install concurrent-log-handler    
 pip install pypiwin32    
 ```
 
 - python
 
-``` python
+```python
 from logging import getLogger, DEBUG    
 from concurrent_log_handler import ConcurrentRotatingFileHandler    
 import os    

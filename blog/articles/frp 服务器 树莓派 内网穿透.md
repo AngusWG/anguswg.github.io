@@ -20,7 +20,7 @@ article: true
 - 解压
 - [设置 frps.ini](https://github.com/fatedier/frp/blob/master/README_zh.md)，大概设置成这样：
 
-``` ini
+```ini
 [common]    
 bind_addr = 服务器 ip    
 bind_port = 7000    
@@ -33,7 +33,7 @@ bind_port = 7000
 1. 下载 [最新版 frp 程序](https://github.com/fatedier/frp/releases)
 2. [解压 frp 并设置 frpc.ini](https://github.com/fatedier/frp/blob/master/README_zh.md)，大概设置成这样：
 
-``` ini
+```ini
 [common]    
 server_addr = 服务器 ip    
 server_port = 7000    
@@ -61,7 +61,7 @@ remote_port = 6000
 
 `vim /etc/rc.local`
 
-``` bash
+```bash
 nohup /home/zza/frp_0.23.1_linux_amd64/frps -c /home/zza/frp_0.23.1_linux_amd64/frps.ini &    
 ```
 
@@ -69,7 +69,7 @@ nohup /home/zza/frp_0.23.1_linux_amd64/frps -c /home/zza/frp_0.23.1_linux_amd64/
 
 `vim /etc/rc.local`
 
-``` bash
+```bash
 nohup /home/zza/frp_0.23.1_linux_arm/frpc -c  /home/zza/frp_0.23.1_linux_arm/frpc.ini &    
 ```
 
@@ -91,7 +91,7 @@ Systemd, 可以保证在树莓派意外重启时，能自动启动 frp 相关服
 
 `vim /usr/lib/systemd/system/frps.service`
 
-``` ini
+```ini
 [Unit]    
 Description=frps    
 After=network.target    
@@ -129,7 +129,7 @@ WantedBy=multi-user.target
 
 `vim /usr/lib/systemd/system/frpc.service`
 
-``` ini
+```ini
 [Unit]    
 Description=frpc    
 After=network.target    

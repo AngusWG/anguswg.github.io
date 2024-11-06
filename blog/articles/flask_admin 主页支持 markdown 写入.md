@@ -16,7 +16,7 @@ article: true
 
 `vim view_markdown_index.py`
 
-``` python
+```python
 #!/usr/bin/python3    
 # encoding: utf-8     
 # @Time    : 2020/3/26 15:37    
@@ -81,7 +81,7 @@ admin_index_view = MarkdownIndexView(name="主页", template="index.html")
 
 `vim index.html`
 
-``` html
+```html
 {% extends 'admin/index.html' %}    
     
 {% block page_body %}    
@@ -142,7 +142,7 @@ admin_index_view = MarkdownIndexView(name="主页", template="index.html")
 
 vim app,py
 
-``` python
+```python
 from view_markdown_index import admin_index_view    
 from flask import Flask    
     

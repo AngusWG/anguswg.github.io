@@ -15,7 +15,7 @@ https://blog.csdn.net/the_victory/article/details/52781357
 1. 首先打开你的 starUML 安装目录，并找到 LicenseManagerDomain.js,starUML 是用 NodeJS 写的，这个文件就是判断注册用户的文件，我的目录是：`D:\Program Files (x86)\StarUML\www\license\node\LicenseManagerDomain.js`
 2. 修改该文件，找到第 24 行，加入如下所示区域的代码。
 
-``` js
+```js
     function validate(PK, name, product, licenseKey) {    
         var pk, decrypted;    
     

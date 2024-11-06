@@ -37,7 +37,7 @@ article: true
 
 ![image.png](../images/7485616-2d884b0a03fd2448.png)
 
-``` bash
+```bash
 docker run --name docker-tutorial python:3.8 python -c "print('Hello, World!')"    
 docker rm docker-tutorial    
 docker run --name docker-tutorial python:3.8 python -c "import os;print(os.listdir('.'))"  -v $PWD:/usr/src/myapp  -w /usr/src/myapp    
@@ -53,7 +53,7 @@ docker rm docker-tutorial
 
 # 安装 python 环境并保存
 
-``` bash
+```bash
 docker run --name  -it jupyter-dev python:3.8 bash     
 pip config set global.index-url https://pypi.douban.com/simple    
 pip install jupyter    
@@ -70,7 +70,7 @@ docker run -d -p 8888:8888 --restart=always  --name jupyter jupyter-dev:version1
 
 > 关闭
 >
-> ``` bash
+> ```bash
 > docker stop jupyter    
 > docker rm jupyter    
 > ```
@@ -102,7 +102,7 @@ docker run -d -p 8888:8888 --restart=always  --name jupyter jupyter-dev:version1
 
 > 先装个命令补全
 >
-> ``` bash
+> ```bash
 > echo "source <(kubectl completion zsh)" >> ~/.zshrc    
 > source ~/.zshrc    
 > ```

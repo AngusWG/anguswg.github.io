@@ -18,7 +18,7 @@ article: true
 
 栗子：
 
-``` text
+```text
 debugfile('/home/1/tensor2tensor/tensor2tensor/bin/t2t-datagen', args='--problem=image_mnist --data_dir=~/t2t_data --tmp_dir=~/t2t_data/tmp',wdir='/home/1/tensor2tensor/tensor2tensor/bin')    
 ```
 

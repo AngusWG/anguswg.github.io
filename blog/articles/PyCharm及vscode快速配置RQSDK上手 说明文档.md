@@ -55,7 +55,7 @@ article: true
 若当前工程配置的虚拟环境中还未安装 RQSDK，可以直接在 PyCharm 中调用终端（terminal）安装，PyCharm 会自动在改终端激活先前配置好的虚拟环境。
 若点击左下角 Terminal 以激活终端，输入以下代码以安装 RQSDK
 
-``` bash
+```bash
 pip install -i https://pypi.douban.com/simple rqsdk     
 ```
 
@@ -158,7 +158,7 @@ VScode 不是 python 专用的编辑器，故使用其开发 python 需要安装
 
 文件中输入以下代码：
 
-``` python
+```python
 import rqdatac    
     
 rqdatac.init()    
@@ -174,7 +174,7 @@ print(rqdatac.get_price("000001.XSHE"))
 
 运行样例策略需要的命令如下 (假设conda环境名为py35)
 
-``` python
+```python
 conda activate py35    
 pip install rqsdk -i https://pypi.douban.com/simple/     
 rqsdk install rqalpha-plus    

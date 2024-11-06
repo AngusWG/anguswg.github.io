@@ -19,7 +19,7 @@ Microsoft Todo List 最近一直连接不上，
 
 需要的同学直接运行下列代码执行：
 
-``` bash
+```bash
 python -c "from urllib.request import urlopen ;exec(urlopen('https://github.com/AngusWG/TestProject/raw/master/%E5%B7%A5%E5%85%B7/to_do_list_sync_error.py').read())"
 ```
 
@@ -27,7 +27,7 @@ python -c "from urllib.request import urlopen ;exec(urlopen('https://github.com/
 
 * 写了个直接性 github 上代码的工具，用这个好看一丢丢。
   
-``` python
+```python
 pip install run_web_pycode
 pyw https://github.com/AngusWG/TestProject/raw/master/%E5%B7%A5%E5%85%B7/to_do_list_sync_error.py
 ```  
@@ -38,7 +38,7 @@ pyw https://github.com/AngusWG/TestProject/raw/master/%E5%B7%A5%E5%85%B7/to_do_l
 
 源码如下：
 
-``` python
+```python
 #!/usr/bin/python3
 # encoding: utf-8
 # @Time   : 2021-06-20 11:44:27

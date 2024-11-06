@@ -18,14 +18,14 @@ article: true
 
 ## docker hub 运行
 
-``` bash
+```bash
 mkdir ~/docker-registry
 cd ~/docker-registry
 mkdir data
 vim docker-compose.yml
 ```
 
-``` dockerfile
+```dockerfile
 version: '3.8'
 
 # docker-compose -f /root/vutlr_docker_compose_file.yml up -d
@@ -59,7 +59,7 @@ services:
 
 ## 鉴权
 
-``` bash
+```bash
 sudo apt install apache2-utils -y
 mkdir /data/docker/auth
 cd /data/docker/auth
@@ -72,7 +72,7 @@ htpasswd -Bc registry.password username
 
 ## 上传
 
-``` bash
+```bash
 # 无鉴权可以不登录
 docker login localhost:5000/
 
@@ -85,7 +85,7 @@ docker push your_domain/test-image
 
 ## 下载
 
-``` bash
+```bash
 # 无鉴权可以不登录
 docker login localhost:5000/
 
@@ -105,7 +105,7 @@ docker pull your_domain/test-image
 
 ### [解决没有足够权限访问 Docker 守护进程的问题](https://www.jianshu.com/p/31b1febf88f1)
 
-``` text
+```text
 permission denied while trying to connect to the Docker daemon socket at unix
 ```
 

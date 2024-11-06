@@ -13,7 +13,7 @@ article: false
 
 - [参考](https://www.cnblogs.com/lihuaichen/p/15410228.html)
 
-``` sh
+```sh
 sudo apt install rdfind
 rdfind -deleteduplicates true /media/faonecze/资料存档/
 ```

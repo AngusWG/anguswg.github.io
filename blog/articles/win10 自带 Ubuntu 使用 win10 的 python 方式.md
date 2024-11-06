@@ -12,7 +12,7 @@ article: true
 
 - windows cmd 下  找到 python 与 pip 文件存放地址
 
-``` bash
+```bash
 λ  where.exe python    
 D:\Python36\python.exe    
     

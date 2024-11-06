@@ -17,7 +17,7 @@ article: true
 要打包代码，首先需要编写自己的代码包。比如你写了一个。py 文件，里面有一些函数啥的，为了方便调用，你需要将代码打包，下次使用时直接调用就好，因此，第一步，将你写的代码打包。
 创建一个文件夹，并在该文件夹下创建 `__init__.py` 文件，然后将你写的。py 文件放到这个文件夹下面就行。
 
-``` text
+```text
 packagename/    
     |    
     +-- __init__.py    
@@ -34,7 +34,7 @@ packagename/
 `packagename`为你创建的包名称，`myxxx.py`是你写的 python 代码，还有添加个`__init__.py`文件（文件内容可以为空）.
 现在你可以调用这个包了（引入包的路径）
 
-``` python
+```python
 import packagename    
 ```
 
@@ -82,7 +82,7 @@ packagename
 
 **setup.py **的样例
 
-``` python
+```python
 # coding: utf-8    
 import codecs    
 import os    
@@ -184,7 +184,7 @@ setup(
 在用户目录下创建。pypirc 文件，文件的内容如下
 window 用户创建`.pypirc`可以命名为`.pypirc.`    位置示例：`C:\Users\admin\.pypirc.`
 
-``` ini
+```ini
 [distutils]    
 index-servers=pypi    
     

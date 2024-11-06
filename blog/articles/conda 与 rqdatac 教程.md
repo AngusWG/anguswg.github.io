@@ -38,7 +38,7 @@ conda 可以创建许多单独的 python 环境，这些 python 环境相互隔�
 
 ![](../images/7485616-81b9defdbf4f1287.png)
 
-``` bash
+```bash
 例如默认路径为：”C:\Users\Administrator\Miniconda3”, 那么需要添加的三个路径则是：     
 1）C:\Users\Administrator\Miniconda3；     
 2）C:\Users\Administrator\Miniconda3\Scripts；     
@@ -99,7 +99,7 @@ pip config set global.trusted-host pypi.tuna.tsinghua.edu.cn
 
 - 输入`ipython` 然后按如下操作
 
-``` python
+```python
 import rqdatac    
 rqdatac.init("手机号","密码")    
 rqdatac.user.get_quota()    

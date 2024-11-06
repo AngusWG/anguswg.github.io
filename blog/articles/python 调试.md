@@ -13,13 +13,13 @@ article: true
 - [参考](https://py.eastlakeside.cn/book/ProgrammerTools/debugging.html) (doc just the docs 主题蛮好看的）
 - 基本不用，现场不方便改代码 debug。
 
-``` bash
+```bash
 python -m pdb my_script.py
 ```
 
 cat my_script.py
 
-``` python
+```python
 import pdb
 
 def make_bread():

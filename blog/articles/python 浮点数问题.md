@@ -14,7 +14,7 @@ permalink: /pages/bf260f/
 
 - [参考（搬运）](https://darkof.me/2014/11/23/python-float/)
 
-``` python
+```python
 In [1]: 0.1 + 0.2 == 0.3
 Out[1]: False
 
@@ -41,7 +41,7 @@ Python 和 C 一样，采用 IEEE 754 规范来存储浮点数。IEEE 754 对双
 
 我一开始的使用方式是
 
-``` python
+```python
 # 错误用法
 In [14]: Decimal(2.675) * Decimal(1.2)
 Out[14]: Decimal('3.209999999999999668043315637')

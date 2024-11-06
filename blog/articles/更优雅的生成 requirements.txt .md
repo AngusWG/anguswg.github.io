@@ -17,20 +17,20 @@ article: true
 
 - 安装
 
-``` bash
+```bash
 pip install pipreqs     
 ```
 
 - 使用
 
-``` bash
+```bash
 pipreqs -h    
 pipreqs [options] <path>    
 ```
 
 - 示例
 
-``` bash
+```bash
 pipreqs . --encoding utf8  --pypi-server https://pypi.douban.com/simple/    
 ```
 
@@ -46,13 +46,13 @@ pipreqs . --encoding utf8  --pypi-server https://pypi.douban.com/simple/
 
 - 安装
 
-``` bash
+```bash
 pip install pipdeptree    
 ```
 
 - 使用
 
-``` bash
+```bash
 pipdeptree     
 ```
 
@@ -65,13 +65,13 @@ pipdeptree
 
 - 安装
 
-``` bash
+```bash
 pip install pip-tools    
 ```
 
 - 卸载所有包
 
-``` bash
+```bash
 pip-sync requirements.txt requirements.txt    
 ```
 

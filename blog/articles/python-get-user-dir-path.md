@@ -20,7 +20,7 @@ os.makedirs(save_dir, exist_ok=True)
 
 ## [新方案](https://stackoverflow.com/questions/3927259/how-do-you-get-the-exact-path-to-my-documents)
 
-``` python
+```python
 In [16]: import ctypes
     ...: from ctypes.wintypes import MAX_PATH
     ...:
@@ -85,7 +85,7 @@ In [16]: import ctypes
 
 ## 整合以后
 
-``` python
+```python
 def get_default_save_dir(dir_name:str= "Pictures"):
     # windows platform
     res_path = os.path.join(os.path.expanduser("~"), dir_name)

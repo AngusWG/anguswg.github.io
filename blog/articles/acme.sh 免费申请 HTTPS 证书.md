@@ -20,7 +20,7 @@ article: false
 
 通过 acme.sh 生成证书并自动更新
 
-``` bash
+```bash
 curl  https://get.acme.sh | sh
 apt install socat
 /root/.acme.sh/acme.sh --register-account -m my@example.com
@@ -37,7 +37,7 @@ apt install socat
   - 更新证书
 - 官方说两个月会自动更新。因为 Nginx 占用会失败。
 
-``` bash
+```bash
 echo "start acme.sh $(date +"%Y-%m-%d %H:%M:%S")"
 systemctl stop nginx   
 /root/.acme.sh/acme.sh  --upgrade  --auto-upgrade
@@ -55,11 +55,11 @@ echo "==========================="
 - 05:02 执行脚本 （大概率不在这个时间段玩电脑）
 - `vim /var/spool/cron/crontabs/root`
 
-``` bash
+```bash
 2 5 * * * /usr/bin/bash /root/script/acme_job.sh > /var/log/acme_job.log
 ```
 
-``` bash
+```bash
 查看自动更新脚本日志
 tail /var/log/acme_job.log
 tail /var/log/cron.log
@@ -84,7 +84,7 @@ tail /var/log/cron.log
 - 输入命令更新证书：`/root/.acme.sh/acme.sh --upgrade --auto-upgrade`
 - 然后报错了：
 
-``` text
+```text
 [Fri 10 Sep 2021 10:11:37 AM CST] Renew: 'www.mydomain.com'
 [Fri 10 Sep 2021 10:11:37 AM CST] Using CA: https://acme-v02.api.letsencrypt.org/directory
 [Fri 10 Sep 2021 10:11:37 AM CST] Standalone mode.
@@ -106,7 +106,7 @@ LISTEN    0         511                   [::]:80                  [::]:*       
 
 ### acme.sh 报错 can not get domain token
 
-``` text
+```text
 Error, can not get domain token "type":"http-01","url":"https://acme.zerossl.com/v2/DV90/chall/ZlNEi3nO05c_rSrqfaId_A","status":"invalid","error":{
 Please add '--debug' or '--log' to check more details.
 ```

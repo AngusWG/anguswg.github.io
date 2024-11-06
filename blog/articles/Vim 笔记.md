@@ -26,7 +26,7 @@ article: true
 
 ---
 
-``` bash
+```bash
 a append
 i insert 
 o open a line below
@@ -38,7 +38,7 @@ O append a line above
 
 ---
 
-``` bash
+```bash
 vs vertical split 
 sp split 
 
@@ -59,7 +59,7 @@ ctrl + e 跳到结尾
 
 ---
 
-``` bash
+```bash
 w/W 移到下一个 word/WORD 开头
 e/E 下一个 word/WORD 结尾
 b/B 回到上一个 word/WORD 开头 backword
@@ -85,7 +85,7 @@ zz 把当前行设置为屏幕中间
 
 ---
 
-``` bash
+```bash
 d 配合使用删除一个单词
 x 删除一个字符
 
@@ -105,7 +105,7 @@ n/N 上一个 下一个匹配
 
 ---
 
-``` bash
+```bash
 vim 替换命令
     :[range] s[ubstitute]/{pattern}/{string}/[flags]
     range 表示范围 比如 :10, 20 表示 10-20 行，%表示全部
@@ -118,7 +118,7 @@ Flags 有几个常用的标志
 
 ---
 
-``` bash
+```bash
 vim 复制粘贴与寄存器
 
 normal 模式下复制粘贴：
@@ -141,7 +141,7 @@ Cmd+v(MacOs)
 
 ---
 
-``` bash
+```bash
 Ctrl + n / ctrl + p 补全单词
 ctrl+x ctrl+f 补全文件名
 ctrl +x ctrl +o 补全代码
@@ -161,7 +161,7 @@ https://github.com/mhinz/vim-startify
 状态栏美化：https://github.com/vim-airline/vim-airline  
 增加代码缩进线条：https://github.com/yggdroot/indentline  
 
-``` vim
+```vim
 call plug#begin('~/.vim/plugged')
 Plug 'mhinz/vim-startify'  " 修改启动界面
 Plug 'vim-airline/vim-airline'  " vim 状态栏美化
@@ -184,7 +184,7 @@ call plug#end()
 
 ---
 
-``` bash
+```bash
 vim-go go ide
 python-mode python 综合 mode
 jedi-vim 代码补全
@@ -195,7 +195,7 @@ tpope/vim-commentary 代码注释
 
 ---
 
-``` bash
+```bash
 git 相关
 vim-fugitive vim 里用 git
 vim-gitgutter vim 里显示文件变动

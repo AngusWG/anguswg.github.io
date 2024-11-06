@@ -113,7 +113,7 @@ def setup_monitoring(app, app_name=None):
 
 - 在你代码中 导入文件并初始化
 
-``` python
+```python
 # from flask import Flask    
 # app = Flask(__name__)    
 from persistd.monitoring import setup_monitoring    
@@ -123,7 +123,7 @@ setup_monitoring(app, "app_name")
 - 设置Gunicom配置文件
 `vim gunicorn.conf.py`
 
-``` python
+```python
 from prometheus_client import multiprocess    
 def child_exit(server, worker):    
     multiprocess.mark_process_dead(worker.pid)    
@@ -135,7 +135,7 @@ def child_exit(server, worker):
 - 设置环境变量：需要一个临时文件夹,且环境变量`prometheus_multiproc_dir`指向该文件夹(`注意启动用户读写权限`),
 该文件夹用于存放prometheus数据。
 
-``` bash
+```bash
 rm -rf multiproc-tmp    
 mkdir multiproc-tmp    
 export prometheus_multiproc_dir=multiproc-tmp    
@@ -145,7 +145,7 @@ gunicorn -c gunicorn_conf.py -w 4 yourapp:app
 ---
 附一个 asyncio 的 monitoring.py
 
-``` python
+```python
 #!/usr/bin/python3    
 # encoding: utf-8    
 # @Time    : 2019/9/5 16:36    
