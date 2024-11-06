@@ -22,6 +22,7 @@ article: true
 export http_proxy="http://192.168.100.228:9999"
 export https_proxy="http://192.168.100.228:9999"
 
+sudo sh -c "$(curl -fsSL  https://github.com/AngusWG/river-zsh-config/raw/master/install.sh)"
 sh -c "$(curl -fsSL  https://github.com/AngusWG/river-zsh-config/raw/master/install.sh)"
 source ~/.zshrc
 ```

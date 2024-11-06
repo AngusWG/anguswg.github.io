@@ -18,14 +18,14 @@ article: true
 
 ## 装一个 trash-cli 工具
 
-- 创建dockerfile
+- 创建 dockerfile
 
 ```dockerfile
 FROM filebrowser/filebrowser:latest
 RUN apk add trash-cli
 ```
 
-- 修改docker-compose.yml
+- 修改 docker-compose.yml
   - [build 相关](https://juejin.cn/s/docker-compose.yml%20build%20context)
 
 ```dockerfile
@@ -67,7 +67,7 @@ trash-put $FILE
 
 ---
 
-## ~~用sh 脚本~~
+## ~~用 sh 脚本~~
 
 ### ~~修改~~
 

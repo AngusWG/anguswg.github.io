@@ -9,7 +9,6 @@ categories:
 article: true
 ---
 
-
 # services
 
 > - 提供一些小的服务
@@ -83,5 +82,5 @@ article: true
 
 ## 联系方式 📬
 
-- 请前往[关于页面](../about.md)
-- 加微信备注：博客
+- 请前往 [关于页面](../about.md)
+- 加微信备注：项目

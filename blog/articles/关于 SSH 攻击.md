@@ -35,8 +35,13 @@ sudo grep 'session opened for user' /var/log/auth.log | awk '{print $1,$2}' | un
 ## 尝试解决
 
 - 开 file2ban 应该问题不大
+  - sudo apt update && sudo apt install fail2ban && systemctl status fail2ban.service
+  - head -20 /etc/fail2ban/jail.conf
+  - fail2ban-client --help
 - 开的机器用户名默认不是 root，登录也只能通过 ssh key
 
 ## 想法
 
 - 做个脚本跑个定时任务，当 `尝试次数过多` 或者 `登录次数过多` 的时候就发个邮件过来提醒。
+
+## 增加 google 验证

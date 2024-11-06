@@ -44,6 +44,7 @@ services:
 ### 生成证书
 
 - `sudo mkdir -p /srv/certs.d/`
+- `sudo cd /srv/certs.d`
 - `sudo vim /srv/certs.d/auto-tls-certs.sh`
 - `sudo bash /srv/certs.d/auto-tls-certs.sh`
 - `记得修改上面的配置信息`
@@ -129,7 +130,7 @@ cp "ca-$CODE.pem" "server-cert-$CODE.pem" "server-key-$CODE.pem" "tls-client-cer
 - 最后，执行以下命令重新加载服务并重启 Docker：
 
 ```bash
-systemctl daemon-reload && service docker restart
+sudo systemctl daemon-reload && sudo service docker restart
 ```
 
 ## 验证

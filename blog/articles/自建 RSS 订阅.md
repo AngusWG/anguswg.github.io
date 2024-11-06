@@ -83,6 +83,8 @@ docker-compose up -d
   - 可以发现如 知乎、b 站、github 等 `不常用 非官方` 的 RSS 订阅源。
     - github 有官方的 release 订阅源，RSSHub Radar 不会显示，在 [rsshub 教程](https://docs.rsshub.app/zh/api) 查到的。
   - 需要 TTRSS 能翻墙访问 RSSHub
+- 默认订阅源
+  - https://rsshub.app
 
 ## rsshub
 

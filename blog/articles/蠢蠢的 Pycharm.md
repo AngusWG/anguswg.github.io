@@ -33,3 +33,17 @@ If the above doesn't help, please try these commands instead:
 
 net stop winnat
 net start winnat
+
+## 提示 Package requirements 'traceback_with_variables’, 'sentry_sdk' are not satisfied
+
+- 改包名到正确包名
+  - traceback-with-variables
+  - sentry-sdk
+- 右下角编辑器 - manage packages - python package - 设置（小齿轮）- 增加 Package Repository
+  - https://pypi.tuna.tsinghua.edu.cn/simple/
+
+## doctest 不支持
+
+- doctest 不支持 `...`
+  - https://youtrack.jetbrains.com/issue/PY-13784/Doctests-Options-Support
+  - 上一句增加 `# doctest: +ELLIPSIS`
