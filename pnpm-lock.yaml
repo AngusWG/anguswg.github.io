@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@cmfcmf/docusaurus-search-local':
+    specifier: ^1.2.0
+    version: 1.2.0(@docusaurus/core@3.0.1)(search-insights@2.8.2)
   '@docusaurus/core':
     specifier: 3.0.1
     version: 3.0.1(@docusaurus/types@3.0.1)(eslint@8.53.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
@@ -23,6 +26,9 @@ dependencies:
   '@giscus/react':
     specifier: ^2.3.0
     version: 2.3.0(react-dom@18.2.0)(react@18.2.0)
+  '@node-rs/jieba':
+    specifier: ^1.10.4
+    version: 1.10.4
   '@popperjs/core':
     specifier: ^2.11.8
     version: 2.11.8
@@ -122,6 +128,17 @@ packages:
     resolution: {integrity: sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==}
     engines: {node: '>=0.10.0'}
 
+  /@algolia/autocomplete-core@1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)(search-insights@2.8.2):
+    resolution: {integrity: sha512-BjiPOW6ks90UKl7TwMv7oNQMnzU+t/wk9mgIDi6b1tXpUek7MW0lbNOUHpvam9pe3lVCf4xPFT+lK7s+e+fs7Q==}
+    dependencies:
+      '@algolia/autocomplete-plugin-algolia-insights': 1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)(search-insights@2.8.2)
+      '@algolia/autocomplete-shared': 1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+      - algoliasearch
+      - search-insights
+    dev: false
+
   /@algolia/autocomplete-core@1.9.3(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)(search-insights@2.8.2):
     resolution: {integrity: sha512-009HdfugtGCdC4JdXUbVJClA0q0zh24yyePn+KUGk3rP7j8FEe/m5Yo/z65gn6nP/cM39PxpzqKrL7A6fP6PPw==}
     dependencies:
@@ -131,6 +148,35 @@ packages:
       - '@algolia/client-search'
       - algoliasearch
       - search-insights
+    dev: false
+
+  /@algolia/autocomplete-js@1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)(search-insights@2.8.2):
+    resolution: {integrity: sha512-4rCCg2B5x6GYzLfDZ3QipWydznbaMjoIwNSEbjpJ9cd/0+4nDpRWuBPxgOSsGmE4BFEor2iwQw4uCY6RrBdpjA==}
+    peerDependencies:
+      '@algolia/client-search': '>= 4.5.1 < 6'
+      algoliasearch: '>= 4.9.1 < 6'
+    dependencies:
+      '@algolia/autocomplete-core': 1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)(search-insights@2.8.2)
+      '@algolia/autocomplete-preset-algolia': 1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)
+      '@algolia/autocomplete-shared': 1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)
+      '@algolia/client-search': 4.19.1
+      algoliasearch: 4.19.1
+      htm: 3.1.1
+      preact: 10.24.3
+    transitivePeerDependencies:
+      - search-insights
+    dev: false
+
+  /@algolia/autocomplete-plugin-algolia-insights@1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)(search-insights@2.8.2):
+    resolution: {integrity: sha512-Jca5Ude6yUOuyzjnz57og7Et3aXjbwCSDf/8onLHSQgw1qW3ALl9mrMWaXb5FmPVkV3EtkD2F/+NkT6VHyPu9A==}
+    peerDependencies:
+      search-insights: '>= 1 < 3'
+    dependencies:
+      '@algolia/autocomplete-shared': 1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)
+      search-insights: 2.8.2
+    transitivePeerDependencies:
+      - '@algolia/client-search'
+      - algoliasearch
     dev: false
 
   /@algolia/autocomplete-plugin-algolia-insights@1.9.3(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)(search-insights@2.8.2):
@@ -145,6 +191,17 @@ packages:
       - algoliasearch
     dev: false
 
+  /@algolia/autocomplete-preset-algolia@1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1):
+    resolution: {integrity: sha512-ggOQ950+nwbWROq2MOCIL71RE0DdQZsceqrg32UqnhDz8FlO9rL8ONHNsI2R1MH0tkgVIDKI/D0sMiUchsFdWA==}
+    peerDependencies:
+      '@algolia/client-search': '>= 4.9.1 < 6'
+      algoliasearch: '>= 4.9.1 < 6'
+    dependencies:
+      '@algolia/autocomplete-shared': 1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)
+      '@algolia/client-search': 4.19.1
+      algoliasearch: 4.19.1
+    dev: false
+
   /@algolia/autocomplete-preset-algolia@1.9.3(@algolia/client-search@4.19.1)(algoliasearch@4.19.1):
     resolution: {integrity: sha512-d4qlt6YmrLMYy95n5TB52wtNDr6EgAIPH81dvvvW8UmuWRgxEtY0NJiPwl/h95JtG2vmRM804M0DSwMCNZlzRA==}
     peerDependencies:
@@ -152,6 +209,16 @@ packages:
       algoliasearch: '>= 4.9.1 < 6'
     dependencies:
       '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)
+      '@algolia/client-search': 4.19.1
+      algoliasearch: 4.19.1
+    dev: false
+
+  /@algolia/autocomplete-shared@1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1):
+    resolution: {integrity: sha512-o/1Vurr42U/qskRSuhBH+VKxMvkkUVTLU6WZQr+L5lGZZLYWyhdzWjW0iGXY7EkwRTjBqvN2EsR81yCTGV/kmg==}
+    peerDependencies:
+      '@algolia/client-search': '>= 4.9.1 < 6'
+      algoliasearch: '>= 4.9.1 < 6'
+    dependencies:
       '@algolia/client-search': 4.19.1
       algoliasearch: 4.19.1
     dev: false
@@ -164,6 +231,10 @@ packages:
     dependencies:
       '@algolia/client-search': 4.19.1
       algoliasearch: 4.19.1
+    dev: false
+
+  /@algolia/autocomplete-theme-classic@1.17.7:
+    resolution: {integrity: sha512-8sxnzRCPxyKZJxbG7EUpV/3AssQOjn+Zq/nvzks+BwbkAcpiLRBsXjvlIIsV4l36bZ+/Ri++ttAflGDPrRfn1A==}
     dev: false
 
   /@algolia/cache-browser-local-storage@4.19.1:
@@ -2384,6 +2455,29 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
+  /@cmfcmf/docusaurus-search-local@1.2.0(@docusaurus/core@3.0.1)(search-insights@2.8.2):
+    resolution: {integrity: sha512-Tc0GhRBsfZAiB+f6BoPB8YCQap6JzzcDyJ0dLSCSzWQ6wdWvDlTBrHc1YqR8q8AZ+STRszL5eZpZFi5dbTCdYg==}
+    peerDependencies:
+      '@docusaurus/core': ^2.0.0
+      nodejieba: ^2.5.0
+    peerDependenciesMeta:
+      nodejieba:
+        optional: true
+    dependencies:
+      '@algolia/autocomplete-js': 1.17.7(@algolia/client-search@4.19.1)(algoliasearch@4.19.1)(search-insights@2.8.2)
+      '@algolia/autocomplete-theme-classic': 1.17.7
+      '@algolia/client-search': 4.19.1
+      '@docusaurus/core': 3.0.1(@docusaurus/types@3.0.1)(eslint@8.53.0)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
+      algoliasearch: 4.19.1
+      cheerio: 1.0.0-rc.12
+      clsx: 1.2.1
+      lunr-languages: 1.14.0
+      mark.js: 8.11.1
+      tslib: 2.8.1
+    transitivePeerDependencies:
+      - search-insights
+    dev: false
+
   /@colors/colors@1.5.0:
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
     engines: {node: '>=0.1.90'}
@@ -3357,6 +3451,31 @@ packages:
       - webpack-cli
     dev: false
 
+  /@emnapi/core@1.3.1:
+    resolution: {integrity: sha512-pVGjBIt1Y6gg3EJN8jTcfpP/+uuRksIo055oE/OBkDNcjZqVbfkWCksG1Jp4yZnj3iKWyWX8fdG/j6UDYPbFog==}
+    requiresBuild: true
+    dependencies:
+      '@emnapi/wasi-threads': 1.0.1
+      tslib: 2.8.1
+    dev: false
+    optional: true
+
+  /@emnapi/runtime@1.3.1:
+    resolution: {integrity: sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==}
+    requiresBuild: true
+    dependencies:
+      tslib: 2.8.1
+    dev: false
+    optional: true
+
+  /@emnapi/wasi-threads@1.0.1:
+    resolution: {integrity: sha512-iIBu7mwkq4UQGeMEM8bLwNK962nXdhodeScX4slfQnRhEMMzvYivHhutCIk8uojvmASXXPC2WNEjwxFWk72Oqw==}
+    requiresBuild: true
+    dependencies:
+      tslib: 2.8.1
+    dev: false
+    optional: true
+
   /@emotion/is-prop-valid@0.8.8:
     resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
     requiresBuild: true
@@ -3556,6 +3675,163 @@ packages:
       '@types/mdx': 2.0.7
       '@types/react': 18.2.21
       react: 18.2.0
+    dev: false
+
+  /@napi-rs/wasm-runtime@0.2.5:
+    resolution: {integrity: sha512-kwUxR7J9WLutBbulqg1dfOrMTwhMdXLdcGUhcbCcGwnPLt3gz19uHVdwH1syKVDbE022ZS2vZxOWflFLS0YTjw==}
+    requiresBuild: true
+    dependencies:
+      '@emnapi/core': 1.3.1
+      '@emnapi/runtime': 1.3.1
+      '@tybys/wasm-util': 0.9.0
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-android-arm-eabi@1.10.4:
+    resolution: {integrity: sha512-MhyvW5N3Fwcp385d0rxbCWH42kqDBatQTyP8XbnYbju2+0BO/eTeCCLYj7Agws4pwxn2LtdldXRSKavT7WdzNA==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-android-arm64@1.10.4:
+    resolution: {integrity: sha512-XyDwq5+rQ+Tk55A+FGi6PtJbzf974oqnpyCcCPzwU3QVXJCa2Rr4Lci+fx8oOpU4plT3GuD+chXMYLsXipMgJA==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [android]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-darwin-arm64@1.10.4:
+    resolution: {integrity: sha512-G++RYEJ2jo0rxF9626KUy90wp06TRUjAsvY/BrIzEOX/ingQYV/HjwQzNPRR1P1o32a6/U8RGo7zEBhfdybL6w==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-darwin-x64@1.10.4:
+    resolution: {integrity: sha512-MmDNeOb2TXIZCPyWCi2upQnZpPjAxw5ZGEj6R8kNsPXVFALHIKMa6ZZ15LCOkSTsKXVC17j2t4h+hSuyYb6qfQ==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-freebsd-x64@1.10.4:
+    resolution: {integrity: sha512-/x7aVQ8nqUWhpXU92RZqd333cq639i/olNpd9Z5hdlyyV5/B65LLy+Je2B2bfs62PVVm5QXRpeBcZqaHelp/bg==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [freebsd]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-linux-arm-gnueabihf@1.10.4:
+    resolution: {integrity: sha512-crd2M35oJBRLkoESs0O6QO3BBbhpv+tqXuKsqhIG94B1d02RVxtRIvSDwO33QurxqSdvN9IeSnVpHbDGkuXm3g==}
+    engines: {node: '>= 10'}
+    cpu: [arm]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-linux-arm64-gnu@1.10.4:
+    resolution: {integrity: sha512-omIzNX1psUzPcsdnUhGU6oHeOaTCuCjUgOA/v/DGkvWC1jLcnfXe4vdYbtXMh4XOCuIgS1UCcvZEc8vQLXFbXQ==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-linux-arm64-musl@1.10.4:
+    resolution: {integrity: sha512-Y/tiJ1+HeS5nnmLbZOE+66LbsPOHZ/PUckAYVeLlQfpygLEpLYdlh0aPpS5uiaWMjAXYZYdFkpZHhxDmSLpwpw==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-linux-x64-gnu@1.10.4:
+    resolution: {integrity: sha512-WZO8ykRJpWGE9MHuZpy1lu3nJluPoeB+fIJJn5CWZ9YTVhNDWoCF4i/7nxz1ntulINYGQ8VVuCU9LD86Mek97g==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-linux-x64-musl@1.10.4:
+    resolution: {integrity: sha512-uBBD4S1rGKcgCyAk6VCKatEVQb6EDD5I40v/DxODi5CuZVCANi9m5oee/MQbAoaX7RydA2f0OSCE9/tcwXEwUg==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-wasm32-wasi@1.10.4:
+    resolution: {integrity: sha512-Y2umiKHjuIJy0uulNDz9SDYHdfq5Hmy7jY5nORO99B4pySKkcrMjpeVrmWXJLIsEKLJwcCXHxz8tjwU5/uhz0A==}
+    engines: {node: '>=14.0.0'}
+    cpu: [wasm32]
+    requiresBuild: true
+    dependencies:
+      '@napi-rs/wasm-runtime': 0.2.5
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-win32-arm64-msvc@1.10.4:
+    resolution: {integrity: sha512-nwMtViFm4hjqhz1it/juQnxpXgqlGltCuWJ02bw70YUDMDlbyTy3grCJPpQQpueeETcALUnTxda8pZuVrLRcBA==}
+    engines: {node: '>= 10'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-win32-ia32-msvc@1.10.4:
+    resolution: {integrity: sha512-DCAvLx7Z+W4z5oKS+7vUowAJr0uw9JBw8x1Y23Xs/xMA4Em+OOSiaF5/tCJqZUCJ8uC4QeImmgDFiBqGNwxlyA==}
+    engines: {node: '>= 10'}
+    cpu: [ia32]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba-win32-x64-msvc@1.10.4:
+    resolution: {integrity: sha512-+sqemSfS1jjb+Tt7InNbNzrRh1Ua3vProVvC4BZRPg010/leCbGFFiQHpzcPRfpxAXZrzG5Y0YBTsPzN/I4yHQ==}
+    engines: {node: '>= 10'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@node-rs/jieba@1.10.4:
+    resolution: {integrity: sha512-GvDgi8MnBiyWd6tksojej8anIx18244NmIOc1ovEw8WKNUejcccLfyu8vj66LWSuoZuKILVtNsOy4jvg3aoxIw==}
+    engines: {node: '>= 10'}
+    optionalDependencies:
+      '@node-rs/jieba-android-arm-eabi': 1.10.4
+      '@node-rs/jieba-android-arm64': 1.10.4
+      '@node-rs/jieba-darwin-arm64': 1.10.4
+      '@node-rs/jieba-darwin-x64': 1.10.4
+      '@node-rs/jieba-freebsd-x64': 1.10.4
+      '@node-rs/jieba-linux-arm-gnueabihf': 1.10.4
+      '@node-rs/jieba-linux-arm64-gnu': 1.10.4
+      '@node-rs/jieba-linux-arm64-musl': 1.10.4
+      '@node-rs/jieba-linux-x64-gnu': 1.10.4
+      '@node-rs/jieba-linux-x64-musl': 1.10.4
+      '@node-rs/jieba-wasm32-wasi': 1.10.4
+      '@node-rs/jieba-win32-arm64-msvc': 1.10.4
+      '@node-rs/jieba-win32-ia32-msvc': 1.10.4
+      '@node-rs/jieba-win32-x64-msvc': 1.10.4
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -3899,6 +4175,14 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
     dev: false
+
+  /@tybys/wasm-util@0.9.0:
+    resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
+    requiresBuild: true
+    dependencies:
+      tslib: 2.8.1
+    dev: false
+    optional: true
 
   /@types/acorn@4.0.6:
     resolution: {integrity: sha512-veQTnWP+1D/xbxVrPC3zHnCZRjSrKfhbMUlEA43iMZLu7EsnTtkJklIuwrCPbOi8YkvDQAiW05VQQFvvz9oieQ==}
@@ -5240,6 +5524,11 @@ packages:
       is-plain-object: 2.0.4
       kind-of: 6.0.3
       shallow-clone: 3.0.1
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
 
   /clsx@2.0.0:
     resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
@@ -7186,6 +7475,10 @@ packages:
       wbuf: 1.7.3
     dev: false
 
+  /htm@3.1.1:
+    resolution: {integrity: sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ==}
+    dev: false
+
   /html-entities@2.4.0:
     resolution: {integrity: sha512-igBTJcNNNhvZFRtm8uA6xMY6xYleeDwn3PeBCkDz7tHttv4F2hsDI2aPgNERWzvRcNYHNT3ymRaQzllmXj4YsQ==}
     dev: false
@@ -8001,6 +8294,7 @@ packages:
     resolution: {integrity: sha512-U+wLL8InpfRalWrr+0SuhWgGt10M4OyAk6G8xCYo2rwpiHtxZkWiFpjei0vO463ghW8LPCdhqQxXlMy2qicAEw==}
     deprecated: This is a typosquat on the popular Lodash package. This is not maintained nor is the original Lodash package.
     dev: false
+    bundledDependencies: false
 
   /locate-path@3.0.0:
     resolution: {integrity: sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A==}
@@ -8111,6 +8405,10 @@ packages:
     dependencies:
       yallist: 4.0.0
 
+  /lunr-languages@1.14.0:
+    resolution: {integrity: sha512-hWUAb2KqM3L7J5bcrngszzISY4BxrXn/Xhbb9TTCJYEGqlR1nG67/M14sp09+PTIRklobrn57IAxcdcO/ZFyNA==}
+    dev: false
+
   /magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
     dependencies:
@@ -8126,6 +8424,10 @@ packages:
     resolution: {integrity: sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==}
     engines: {node: '>=8'}
     dev: true
+
+  /mark.js@8.11.1:
+    resolution: {integrity: sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ==}
+    dev: false
 
   /markdown-extensions@2.0.0:
     resolution: {integrity: sha512-o5vL7aDWatOTX8LzaS1WMoaoxIiLRQJuIKKe2wAw6IeULDHaqbiqiggmx+pKvZDb1Sj+pE46Sn1T7lCqfFtg1Q==}
@@ -9806,6 +10108,10 @@ packages:
       nanoid: 3.3.6
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /preact@10.24.3:
+    resolution: {integrity: sha512-Z2dPnBnMUfyQfSQ+GBdsGa16hz35YmLmtTLhM169uW944hYL6xzTYkJjC07j+Wosz733pMWx0fgON3JNw1jJQA==}
+    dev: false
 
   /prebuild-install@7.1.1:
     resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==}
@@ -11567,6 +11873,10 @@ packages:
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+
+  /tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+    dev: false
 
   /tsutils@3.21.0(typescript@5.3.3):
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}

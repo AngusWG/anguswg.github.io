@@ -1,15 +1,16 @@
 name: Docsearch
 
-#on:
-#  push:
-#    branches:
-#      - main
-#      # develop
+on:
+  # push:
+  #   branches:
+  #     - main
+  #     # develop
+  workflow_dispatch: # 手动触发用例
 
 jobs:
   algolia:
     runs-on: ubuntu-latest
-    needs: deploy  # 这行确保此作业在 deploy 作业完成后运行
+    # needs: deploy  # 这行确保此作业在 deploy 作业完成后运行
 
     steps:
       - uses: actions/checkout@v2

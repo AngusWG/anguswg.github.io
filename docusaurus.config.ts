@@ -115,11 +115,11 @@ const config: Config = {
       ],
       copyright: `Built by Docusaurus | Copyright © ${new Date().getFullYear()} AngusWG blog | MIT License`,
     },
-    algolia: {
-      appId: 'H5ZK2BY49V',
-      apiKey: '0c0d4b4e4b7e04317eae247ce1001393',
-      indexName: 'AngusWG',
-    },
+    // algolia: {
+    //   appId: 'H5ZK2BY49V',
+    //   apiKey: '0c0d4b4e4b7e04317eae247ce1001393',
+    //   indexName: 'AngusWG',
+    // },
     prism: {
       theme: themes.oneLight,
       darkTheme: themes.oneDark,
@@ -216,6 +216,13 @@ const config: Config = {
           title: 'AngusWG',
           copyright: `Built by Docusaurus | Copyright © ${new Date().getFullYear()} AngusWG blog | MIT License`,
         },
+      },
+    ],
+    [
+      require.resolve('@cmfcmf/docusaurus-search-local'),
+      {
+        // Options here
+        language: ['en', 'zh'],
       },
     ],
     ['@docusaurus/plugin-ideal-image', { disableInDev: false }],
