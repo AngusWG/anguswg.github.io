@@ -1,6 +1,6 @@
 ---
 title: 自建 RSS 订阅
-date: 2024-01-05 15:00:18
+date: 2024-01-05 15:00:19
 permalink: /pages/23a443fc-f25f-49f0-a492-6a938347a02e/
 tags:
   - 
@@ -51,9 +51,9 @@ docker-compose up -d
       - HTTPS_PROXY=http://localhost:9999
 ```
 
-### ~~设置邮件~~
+### 设置邮件
 
-- `失败 暂时不弄`
+- 参考 [[ttrss 邮件]]
 
 ```yaml
   service.rss:
@@ -62,6 +62,7 @@ docker-compose up -d
     ports:
       - 181:80
     environment:
+      - ENABLE_PLUGINS=auth_internal,mailer_smtp # plugin
       - SMTP_FROM_NAME=Tiny Tiny RSS
       - SMTP_FROM_ADDRESS=USERNAME@gmail.com
       - SMTP_SERVER=smtp.gmail.com:465
