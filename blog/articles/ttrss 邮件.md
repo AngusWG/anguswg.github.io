@@ -1,6 +1,6 @@
 ---
 title: ttrss 邮件
-date: 2024-11-11 09:55:09
+date: 2024-11-11 09:55:05
 permalink: /pages/319a8557-6849-41b3-8ee7-70e519d5aff5/
 tags:
   - 
@@ -12,6 +12,8 @@ article: true
 # ttrss 邮件
 
 - 参考
+  - [Awesome-TTRSS](https://github.com/HenryQW/Awesome-TTRSS)
+    - https://ttrss.henry.wang
   - [项目](https://gitlab.tt-rss.org/tt-rss/plugins/ttrss-mailer-smtp)
 
 ## docker-compose.yml 默认不装载插件
