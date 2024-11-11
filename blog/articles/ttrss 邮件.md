@@ -1,6 +1,6 @@
 ---
 title: ttrss 邮件
-date: 2024-11-11 09:55:02
+date: 2024-11-11 09:55:01
 permalink: /pages/319a8557-6849-41b3-8ee7-70e519d5aff5/
 tags:
   - 
@@ -42,14 +42,17 @@ RUN chown -R nobody:nginx  /var/www/plugins.local/mailer_smtp
 - 修改镜像
 
 ```yml
-  service.rss: # 原来的
+# 修改前
+  service.rss:
     image: wangqiru/ttrss:latest
 
 ```
 
 ```yml
+# 修改后
   service.rss:
-    build: # 修改后
+    # image: wangqiru/ttrss:latest
+    build: # 新增
       context: .
       dockerfile: Dockerfile.ttrss # 使用自定义 Dockerfile
 ```
@@ -78,7 +81,9 @@ RUN chown -R nobody:nginx  /var/www/plugins.local/mailer_smtp
 
 ---
 
-## 报错 SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+## 报错
+
+> SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
 
 - 修改邮箱配置
   - 将端口从 25 改为 465 测试邮件发送成功
