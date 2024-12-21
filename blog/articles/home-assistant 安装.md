@@ -1,6 +1,6 @@
 ---
 title: home-assistant 安装
-date: 2024-12-21 20:18:59
+date: 2024-12-21 20:18:58
 permalink: /pages/9b3b1d45-db2b-45af-9f1a-a49c2bbe9352/
 tags:
   - 
@@ -85,3 +85,10 @@ sudo docker compose restart
 - 搜了一下 好像需要 home-assistant-supervisor 这个版本 目前不支持 Ubuntu
   - [参考](https://community.home-assistant.io/t/how-to-run-home-assistant-supervisor-in-a-docker-container/303682/8)
   - 放弃
+
+## 取消 小米授权
+
+- 访问 [小米云服务](https://account.xiaomi.com/)
+  - 绑定授权
+  - Xiaomi Home (Home Assistant Integration)
+  - 取消授权
