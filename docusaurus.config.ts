@@ -218,13 +218,13 @@ const config: Config = {
         },
       },
     ],
-    [
-      require.resolve('@cmfcmf/docusaurus-search-local'),
-      {
-        // Options here
-        language: ['en', 'zh'],
-      },
-    ],
+    // [
+    //   require.resolve('@cmfcmf/docusaurus-search-local'),
+    //   {
+    //     // Options here
+    //     language: ['en', 'zh'],
+    //   },
+    // ],
     ['@docusaurus/plugin-ideal-image', { disableInDev: false }],
     [
       '@docusaurus/plugin-pwa',
