@@ -37,6 +37,7 @@
     "@docusaurus/plugin-ideal-image": "3.0.1",
     "@docusaurus/plugin-pwa": "3.0.1",
     "@docusaurus/preset-classic": "3.0.1",
+    "@docusaurus/theme-mermaid": "3.0.1",
     "@docusaurus/theme-search-algolia": "3.0.1",
     "@giscus/react": "^2.3.0",
     "@node-rs/jieba": "^1.10.4",
