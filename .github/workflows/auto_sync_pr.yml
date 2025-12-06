@@ -25,3 +25,4 @@ jobs:
           body: sync note to blog
           branch: dev_auto
           base: main
+          remove-pull-request: true

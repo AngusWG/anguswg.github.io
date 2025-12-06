@@ -102,6 +102,7 @@ const config: Config = {
             // { label: '关于我', to: '/about' },
             { label: 'GitHub', href: 'https://github.com/AngusWG' },
             { label: 'Twitter', href: 'https://twitter.com/Angus_Zou' },
+            { label: "Linkedin", href: "https://www.linkedin.com/in/angus-zou-a48672154/"},
           ],
         },
         {
