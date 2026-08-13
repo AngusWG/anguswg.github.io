@@ -1,12 +1,13 @@
 ---
 title: SurfingKeys 使用说明
-date: 2025-12-12 23:28:03
+date: 2025-12-12T23:28:03.000Z
 permalink: /pages/3f8a6ccf-ea46-441a-9f9e-183a798aab89/
-tags: 
- -
-categories: 
- - 随笔
+tags:
+  - 随笔
+categories:
+  - 随笔
 article: true
+slug: /pages/3f8a6ccf-ea46-441a-9f9e-183a798aab89/
 ---
 # SurfingKeys 使用说明
 
@@ -214,7 +215,7 @@ article: true
 - `<Ctrl-j>` : 切换全能栏的位置
 - `<Ctrl-.>` : 显示下一页结果
 - `<Ctrl-,>` : 显示上一页结果
-- `<Ctrl-c>` : 复制选定项的 URL 或所有列出项的 URL 
+- `<Ctrl-c>` : 复制选定项的 URL 或所有列出项的 URL
 - `<Ctrl-D>` : 从书签或历史记录中删除所有列出项
 - `<Ctrl-r>` : 按访问次数或上次访问时间重新排序历史记录 |
 - `<Esc>` : 关闭全能栏
@@ -285,7 +286,7 @@ article: true
 ## 设置
 
 - `;pm` : 预览 Markdown |
-- `;e` : 编辑设置 
+- `;e` : 编辑设置
 - `;v` : 打开 NeoVim |
 
 ## Chrome 相关 URL
@@ -334,8 +335,8 @@ article: true
 - `<Ctrl-e>` : 将光标移动到行尾
 - `<Ctrl-f>` : 将光标移动到行首
 - `<Ctrl-u>` : 删除光标前所有已输入的字符 |
-- `<Alt-b>` : 将光标向后移动 1 个单词 
-- `<Alt-f>` : 将光标向前移动 1 个单词 
+- `<Alt-b>` : 将光标向后移动 1 个单词
+- `<Alt-f>` : 将光标向前移动 1 个单词
 - `<Alt-w>` : 向后删除一个单词
 - `<Alt-d>` : 向前删除一个单词
 - `<Esc>` : 退出插入模式
@@ -343,4 +344,5 @@ article: true
 - `<Ctrl-i>` : 为当前输入打开 Vim 编辑器
 - `<Ctrl-Alt-i>`: 为当前输入打开 NeoVim 编辑器 |
 
+</div>
 </div>
