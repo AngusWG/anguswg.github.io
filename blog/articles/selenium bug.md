@@ -102,7 +102,7 @@ Windows Registry Editor Version 5.00
 
 ## 启动后没有报错
 
-- chrome driver {'status': [13, 'unknown error'], 'value': ''}
+- chrome driver `{'status': [13, 'unknown error'], 'value': ''}`
 
 - 将程序的 .env 里的代理关掉
 - 或者设置不走代理的部分 dns
