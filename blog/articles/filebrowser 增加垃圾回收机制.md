@@ -1,6 +1,6 @@
 ---
 title: filebrowser 增加垃圾回收机制
-date: 2023-12-13 09:22:24
+date: 2026-08-25 14:46:48
 permalink: /pages/a17d98c9-1c39-45db-a711-09f9e108e1c5/
 tags:
   - 
@@ -15,18 +15,24 @@ article: true
   - Add the command below under "Before Delete"
   - `/bin/sh -c 'if [[ "$FILE" != "/srv/Trash/"* ]]; then mv $FILE /srv/Trash; fi'`
   - Works great in my docker container on linux
+- 2026-08-25 更新 image 到 s6
 
-## 装一个 trash-cli 工具
+## docker-compose + 装 trash-cli
+
+### docker file
 
 - 创建 dockerfile
 
 ```dockerfile
-FROM filebrowser/filebrowser:latest
+FROM filebrowser/filebrowser:s6
+# no lightweight busybox-based container 
+# FROM filebrowser/filebrowser:latest
 RUN apk add trash-cli
 ```
 
 - 修改 docker-compose.yml
   - [build 相关](https://juejin.cn/s/docker-compose.yml%20build%20context)
+  - 改成 ./database ./config 两个文件夹了，新镜像改了逻辑 配置识别很奇怪。
 
 ```dockerfile
 # vi docker-compose.yml
@@ -43,8 +49,8 @@ services:
     networks:
       - net
     volumes:
-      - ./filebrowser.db:/database.db
-      - ./.filebrowser.json:/.filebrowser.json
+      - ./database:/database
+      - ./config:/config
       - /etc/localtime:/etc/localtime:ro
       # data
       - ./srv:/srv
@@ -56,7 +62,25 @@ networks:
 
 ```
 
+### 设置配置
+
+- 初始化配置文件和数据可
+  - `docker run --rm -v $(pwd)/database:/database -v $(pwd)/config:/config filebrowser/filebrowser config init`
+- 设置密码长度为 1
+  - `docker run --rm -v $(pwd)/database:/database -v $(pwd)/config:/config filebrowser/filebrowser config set --minimumPasswordLength=1`
+  - 注意 admin 密码不能设置为 admin 建议自己再创建一个账号用于管路员
+- 开启 Command Runner
+  - `docker run --rm -v $(pwd)/database:/database -v $(pwd)/config:/config filebrowser/filebrowser config set --disableExec false`
+  - 没有这个不能设置 Before Delete
+
 - 设置 - 全局设置 - 修改 Before Delete 删除命令
+
+### 启动命令
+
+- sudo docker compose up -d --build
+- admin 密码第一次会打印到日志里
+
+## 设置 trash
 
 ```dockerfile
 trash-put $FILE
@@ -64,55 +88,10 @@ trash-put $FILE
 
 - 查找删除的文件在哪里
   - `trash-list --trash-dirs`
+  - `trash-put --trash-dir=/srv/data/.Trash-1000 $FILE`
 
 ---
 
-## ~~用 sh 脚本~~
+## Aside
 
-### ~~修改~~
-
-- 并在 `/srv/Trash/delete.log` 中 增加删除记录
-
-```bash
-/bin/sh -c 'if [[ "$FILE" != "/srv/Trash/"* ]]; then mv $FILE /srv/Trash; fi'
-/bin/sh -c 'if [[ "$FILE" != "/srv/Trash/"* ]]; then mv $FILE /srv/Trash/ && echo "[$USERNAME] Deleted: $FILE" >> /srv/Trash/delete.log; fi'
-/bin/sh -c 'if [[ "$FILE" != "/srv/Trash/"* ]]; then mv $FILE /srv/Trash/ && echo "[$USERNAME $(date +"%Y-%m-%d_%H-%M-%S")] Deleted: $FILE" >> /srv/Trash/delete.log; fi'
-```
-
-- 如果 /srv/Trash 有同名的 $FILE 文件 ，则拒绝移动并报错。
-
-```bash
-/bin/sh -c 'if [[ "$FILE" != "/srv/Trash/"* ]]; then mv $FILE /srv/Trash/ --suffix $(date +/"%Y-%m-%d_%H-%M-%S/") && echo "[$USERNAME $(date +/"%Y-%m-%d_%H-%M-%S/")] Deleted: $FILE" >> /srv/Trash/delete.log; fi'
-```
-
-### ~~报错~~
-
-```text
-filebrowser  | 2024/03/13 11:20:56 [INFO] Blocking Command: "/bin/sh /root/before_delete.sh"
-filebrowser  | sh: /srv/Trash/delete.log: unknown operand
-```
-
-- 改为 sh 脚本后 一行一行注释去找哪一行报错
-- `"$FILE" != "/srv/Trash/"*` 这一句有问题 会导致 `/srv/Trash/delete.log: unknown operand`
-- 改成字符串比较
-
-### ~~改用 sh 脚本~~
-
-```sh
-#!/bin/sh
-
-if [[ "${1:0:11}" != "/srv/Trash/"  ]]; then
-    NOW=$(date +"%Y-%m-%d_%H-%M-%S")
-    T_FILE=$1
-    if [ -e "/srv/Trash/$(basename "$1")" ]; then
-        mv "$1" "${1}_${NOW}"
-        T_FILE="${1}_${NOW}"
-    fi
-
-    mv "${T_FILE}" /srv/Trash/
-    echo "$2 ${NOW} Deleted: $1 - /srv/Trash/$(basename ${T_FILE})"
-    echo "$2 ${NOW} Deleted: $1 -> /srv/Trash/$(basename ${T_FILE})" >> /srv/Trash/DELETE.log;
-fi
-```
-
-- 配置处改为 `/bin/sh /root/before_delete.sh $FILE $USERNAME`
+- 这个 [项目](https://github.com/filebrowser/filebrowser) 作者说在今年 9 月份就不跟新了，已经把项目关闭了 issue 和 PR
