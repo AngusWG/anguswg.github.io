@@ -1,6 +1,6 @@
 ---
 title: filebrowser 增加垃圾回收机制
-date: 2023-12-13 09:22:24
+date: 2026-08-25 14:46:46
 permalink: /pages/a17d98c9-1c39-45db-a711-09f9e108e1c5/
 tags:
   - 
@@ -15,8 +15,9 @@ article: true
   - Add the command below under "Before Delete"
   - `/bin/sh -c 'if [[ "$FILE" != "/srv/Trash/"* ]]; then mv $FILE /srv/Trash; fi'`
   - Works great in my docker container on linux
+- 2026-08-25 更新 image 到 s6
 
-## 装一个 trash-cli 工具
+## docker-compose + 装 trash-cli
 
 - 创建 dockerfile
 
@@ -43,8 +44,8 @@ services:
     networks:
       - net
     volumes:
-      - ./filebrowser.db:/database.db
-      - ./.filebrowser.json:/.filebrowser.json
+      - ./database:/database
+      - ./config:/config
       - /etc/localtime:/etc/localtime:ro
       # data
       - ./srv:/srv
@@ -55,6 +56,26 @@ networks:
     driver: bridge
 
 ```
+
+### 定制镜像
+
+``` dockerfile
+FROM filebrowser/filebrowser:s6
+# no lightweight busybox-based container 
+# FROM filebrowser/filebrowser:latest
+RUN apk add trash-cli
+```
+
+### 设置配置
+
+- 初始化配置文件和数据可
+  - `docker run --rm -v $(pwd)/database:/database -v $(pwd)/config:/config filebrowser/filebrowser config init`
+- 设置密码长度为 1
+  - `docker run --rm -v $(pwd)/database:/database -v $(pwd)/config:/config filebrowser/filebrowser config set --minimumPasswordLength=1`
+  - 注意 admin 密码不能设置为 admin 建议自己再创建一个账号用于管路员
+- 开启 Command Runner
+  - `docker run --rm -v $(pwd)/database:/database -v $(pwd)/config:/config filebrowser/filebrowser config set --disableExec false`
+  - 没有这个不能设置 Before Delete
 
 - 设置 - 全局设置 - 修改 Before Delete 删除命令
 
