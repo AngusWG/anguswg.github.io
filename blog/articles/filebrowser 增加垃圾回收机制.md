@@ -1,6 +1,6 @@
 ---
 title: filebrowser 增加垃圾回收机制
-date: 2026-08-25 14:46:47
+date: 2026-08-25 14:46:48
 permalink: /pages/a17d98c9-1c39-45db-a711-09f9e108e1c5/
 tags:
   - 
@@ -19,7 +19,7 @@ article: true
 
 ## docker-compose + 装 trash-cli
 
-## docker file
+### docker file
 
 - 创建 dockerfile
 
@@ -74,6 +74,13 @@ networks:
   - 没有这个不能设置 Before Delete
 
 - 设置 - 全局设置 - 修改 Before Delete 删除命令
+
+### 启动命令
+
+- sudo docker compose up -d --build
+- admin 密码第一次会打印到日志里
+
+## 设置 trash
 
 ```dockerfile
 trash-put $FILE
